@@ -424,6 +424,15 @@ enum CalculatorCell: AttributedString, CellAppearence, ToggledValue {
         }
     }
     
+    var isClear: Bool {
+        switch self {
+        case .clear:
+            return true
+        default:
+            return false
+        }
+    }
+    
     var isFunctionWithTwoInputs: Bool {
         switch self {
         case .exponentFunction(let function):

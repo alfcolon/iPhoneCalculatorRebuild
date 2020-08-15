@@ -104,13 +104,13 @@ class CalculatorCollectionViewCell: UICollectionViewCell {
     }
     
     func updateAppearenceForSelectedCell() {
-        guard self.calculatorCell.appearenceChangesWhenSelected else { return }
+//        guard self.calculatorCell.appearenceChangesWhenSelected else { return }
         self.backgroundColor = self.calculatorCell.selectedBackgroundColor
         self.label.textColor = self.calculatorCell.selectedTextColor
     }
     
     func updateAppearenceForDeselectedCell() {
-        guard self.calculatorCell.appearenceChangesWhenSelected else { return }
+//        guard self.calculatorCell.appearenceChangesWhenSelected else { return }
         self.backgroundColor = self.calculatorCell.backgroundColor
         self.label.textColor = self.calculatorCell.textColor
     }

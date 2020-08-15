@@ -79,17 +79,17 @@ class StandardCalculatorCollectionView: UICollectionView, ManageStandardCalculat
         let multiplicationCell: CalculatorCollectionViewCell! = self.trackedViewCells[7]
         let subtractionCell: CalculatorCollectionViewCell! = self.trackedViewCells[11]
         
-        if selectedCellIndex != 3 && additionCell.appearsToBeSelected {
-            additionCell.appearsToBeSelected.toggle()
+        if selectedCellIndex != 15 && additionCell.appearsToBeSelected {
+            additionCell.appearsToBeSelected = false
         }
-        if selectedCellIndex != 7 && divisionCell.appearsToBeSelected {
-            divisionCell.appearsToBeSelected.toggle()
+        if selectedCellIndex != 3 && divisionCell.appearsToBeSelected {
+            divisionCell.appearsToBeSelected = false
         }
-        if selectedCellIndex != 11 && multiplicationCell.appearsToBeSelected {
-            multiplicationCell.appearsToBeSelected.toggle()
+        if selectedCellIndex != 7 && multiplicationCell.appearsToBeSelected {
+            multiplicationCell.appearsToBeSelected = false
         }
-        if selectedCellIndex != 15 && subtractionCell.appearsToBeSelected {
-            subtractionCell.appearsToBeSelected.toggle()
+        if selectedCellIndex != 11 && subtractionCell.appearsToBeSelected {
+            subtractionCell.appearsToBeSelected = false
         }
     }
     
@@ -111,7 +111,7 @@ class StandardCalculatorCollectionView: UICollectionView, ManageStandardCalculat
             self.deselectOperatorIfNeeded(selectedCellIndex: selectedCellIndex)
         case .operator_:
             self.deselectOperatorIfNeeded(selectedCellIndex: selectedCellIndex)
-            selectedCell.appearsToBeSelected.toggle()
+            selectedCell.appearsToBeSelected = true
         case .equal:
             self.deselectAllCellsThatAppearToBeSelectedIfNeeded()
         default:
@@ -124,19 +124,19 @@ class StandardCalculatorCollectionView: UICollectionView, ManageStandardCalculat
         case .Addition:
             let additionCell: CalculatorCollectionViewCell! = self.trackedViewCells[15]
             additionCell.isHighlighted = true
-            additionCell.appearsToBeSelected.toggle()
+            additionCell.appearsToBeSelected = true
         case .Division:
             let divisionCell: CalculatorCollectionViewCell! = self.trackedViewCells[3]
             divisionCell.isHighlighted = true
-            divisionCell.appearsToBeSelected.toggle()
+            divisionCell.appearsToBeSelected = true
         case .Multiplication:
             let multiplicationCell: CalculatorCollectionViewCell! = self.trackedViewCells[7]
             multiplicationCell.isHighlighted = true
-            multiplicationCell.appearsToBeSelected.toggle()
+            multiplicationCell.appearsToBeSelected = true
         case .Subtraction:
             let subtractionCell: CalculatorCollectionViewCell! = self.trackedViewCells[11]
             subtractionCell.isHighlighted = true
-            subtractionCell.appearsToBeSelected.toggle()
+            subtractionCell.appearsToBeSelected = true
         }
     }
     
@@ -180,10 +180,10 @@ class StandardCalculatorCollectionView: UICollectionView, ManageStandardCalculat
         let standardCalculatorDivisionCell: CalculatorCollectionViewCell! = self.trackedViewCells[3]
         let standardCalculatorMultiplicationCell: CalculatorCollectionViewCell! = self.trackedViewCells[7]
         let standardCalculatorSubtractionCell: CalculatorCollectionViewCell! = self.trackedViewCells[11]
-        standardCalculatorAdditionCell.isSelected = scientificCalculatorAdditionCell.isSelected
-        standardCalculatorDivisionCell.isSelected = scientificCalculatorDivisionCell.isSelected
-        standardCalculatorMultiplicationCell.isSelected = scientificCalculatorMultiplicationCell.isSelected
-        standardCalculatorSubtractionCell.isSelected = scientificCalculatorSubtractionCell.isSelected
+        standardCalculatorAdditionCell.appearsToBeSelected = scientificCalculatorAdditionCell.isSelected
+        standardCalculatorDivisionCell.appearsToBeSelected = scientificCalculatorDivisionCell.isSelected
+        standardCalculatorMultiplicationCell.appearsToBeSelected = scientificCalculatorMultiplicationCell.isSelected
+        standardCalculatorSubtractionCell.appearsToBeSelected = scientificCalculatorSubtractionCell.isSelected
         
         //Sync clearCells
         let scientificCalculatorClearCell: CalculatorCollectionViewCell! = self.viewControllerDelegate.scientificCalculatorCollectionView.trackedViewCells[6]
