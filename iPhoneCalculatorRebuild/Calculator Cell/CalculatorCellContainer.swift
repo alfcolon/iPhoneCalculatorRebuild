@@ -44,4 +44,3 @@ class CalculatorCellContainer: Hashable {
         self.calculatorCell = calculatorCell
     }
 }
-

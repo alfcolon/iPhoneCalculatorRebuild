@@ -98,6 +98,16 @@
 		38F1890C24AC583D00F7BDE4 /* SyncScientificCalculatorCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1890B24AC583D00F7BDE4 /* SyncScientificCalculatorCollectionViewCells.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		38158F2D24E724D300A5385D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38DA239A247CE6B70046239F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38DA23A1247CE6B70046239F;
+			remoteInfo = iPhoneCalculatorRebuild;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		380805E32489D00600FAF9BE /* SIUnitLabelUniversalConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIUnitLabelUniversalConstraints.swift; sourceTree = "<group>"; };
 		38097A6424948DD0009712EF /* LabelViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewConstraints.swift; sourceTree = "<group>"; };
@@ -106,6 +116,7 @@
 		38097A6E2494A7B6009712EF /* RadicalViewSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadicalViewSelected.swift; sourceTree = "<group>"; };
 		38097A702494A7E6009712EF /* RadicalViewDeselected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadicalViewDeselected.swift; sourceTree = "<group>"; };
 		38097A722494AF4C009712EF /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		38158F2824E724D300A5385D /* iPhoneCalculatorRebuildTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhoneCalculatorRebuildTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		382019FD247DC454004FDE24 /* SIUnitLabelConstraintsLandscapeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIUnitLabelConstraintsLandscapeConstraints.swift; sourceTree = "<group>"; };
 		382019FF247DC465004FDE24 /* SIUnitLabelConstraintsPortraitConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIUnitLabelConstraintsPortraitConstraints.swift; sourceTree = "<group>"; };
 		38201A01247DC486004FDE24 /* ScientificCalculatorCollectionViewLandscapeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificCalculatorCollectionViewLandscapeConstraints.swift; sourceTree = "<group>"; };
@@ -193,6 +204,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		38158F2524E724D300A5385D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38DA239F247CE6B70046239F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				38DA23A2247CE6B70046239F /* iPhoneCalculatorRebuild.app */,
+				38158F2824E724D300A5385D /* iPhoneCalculatorRebuildTests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -564,6 +583,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		38158F2724E724D300A5385D /* iPhoneCalculatorRebuildTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38158F3124E724D300A5385D /* Build configuration list for PBXNativeTarget "iPhoneCalculatorRebuildTests" */;
+			buildPhases = (
+				38158F2424E724D300A5385D /* Sources */,
+				38158F2524E724D300A5385D /* Frameworks */,
+				38158F2624E724D300A5385D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38158F2E24E724D300A5385D /* PBXTargetDependency */,
+			);
+			name = iPhoneCalculatorRebuildTests;
+			productName = iPhoneCalculatorRebuildTests;
+			productReference = 38158F2824E724D300A5385D /* iPhoneCalculatorRebuildTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		38DA23A1247CE6B70046239F /* iPhoneCalculatorRebuild */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38DA23B6247CE6BB0046239F /* Build configuration list for PBXNativeTarget "iPhoneCalculatorRebuild" */;
@@ -587,10 +624,14 @@
 		38DA239A247CE6B70046239F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Alfredo Colon";
 				TargetAttributes = {
+					38158F2724E724D300A5385D = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 38DA23A1247CE6B70046239F;
+					};
 					38DA23A1247CE6B70046239F = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -610,11 +651,19 @@
 			projectRoot = "";
 			targets = (
 				38DA23A1247CE6B70046239F /* iPhoneCalculatorRebuild */,
+				38158F2724E724D300A5385D /* iPhoneCalculatorRebuildTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		38158F2624E724D300A5385D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38DA23A0247CE6B70046239F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,6 +682,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		38158F2424E724D300A5385D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38DA239E247CE6B70046239F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -723,6 +779,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		38158F2E24E724D300A5385D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38DA23A1247CE6B70046239F /* iPhoneCalculatorRebuild */;
+			targetProxy = 38158F2D24E724D300A5385D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		38DA23AB247CE6B70046239F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -736,6 +800,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		38158F2F24E724D300A5385D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 955MLY2U7C;
+				INFOPLIST_FILE = iPhoneCalculatorRebuildTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alfredoDevelops.iPhoneCalculatorRebuildTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPhoneCalculatorRebuild.app/iPhoneCalculatorRebuild";
+			};
+			name = Debug;
+		};
+		38158F3024E724D300A5385D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 955MLY2U7C;
+				INFOPLIST_FILE = iPhoneCalculatorRebuildTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alfredoDevelops.iPhoneCalculatorRebuildTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPhoneCalculatorRebuild.app/iPhoneCalculatorRebuild";
+			};
+			name = Release;
+		};
 		38DA23B4247CE6BB0046239F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -889,6 +995,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		38158F3124E724D300A5385D /* Build configuration list for PBXNativeTarget "iPhoneCalculatorRebuildTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38158F2F24E724D300A5385D /* Debug */,
+				38158F3024E724D300A5385D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		38DA239D247CE6B70046239F /* Build configuration list for PBXProject "iPhoneCalculatorRebuild" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

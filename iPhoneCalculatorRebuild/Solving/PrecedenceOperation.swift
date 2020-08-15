@@ -102,15 +102,15 @@ class PrecedenceOperation {
     //MARK: - Methods
     
     func updateOperation(with newOperator: CalculatorCell.Operator) {
-        let precedenceOperationTotalLeftTerm = self.leftTerm
-        let precedenceOperationTotalOperator = self.operator_
-        let precedenceOperationTotalRightTerm = self.rightTerm
-        let precedenceOperationTotalTerm = Term.precedenceOperationTotal(
-            leftTerm: precedenceOperationTotalLeftTerm,
-            operator_: precedenceOperationTotalOperator!,
-            rightTerm: precedenceOperationTotalRightTerm
+        let precedenceOperationLeftTerm = self.leftTerm
+        let precedenceOperationOperator = self.operator_
+        let precedenceOperationRightTerm = self.rightTerm
+        let precedenceOperationTerm = Term.precedenceOperation(
+            leftTerm: precedenceOperationLeftTerm,
+            operator_: precedenceOperationOperator!,
+            rightTerm: precedenceOperationRightTerm
         )
-        self.leftTerm = precedenceOperationTotalTerm
+        self.leftTerm = precedenceOperationTerm
         self.operator_ = newOperator
         self.rightTerm = Term.ThisTermNeedsToBeSet
     }

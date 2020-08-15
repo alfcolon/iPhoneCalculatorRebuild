@@ -111,7 +111,7 @@ class PrecedenceOperationController: EvaluateNewOperator, RemovePrecedenceOperat
         
         if self.low.operationStarted {
             if self.high.rightTermIsSet {
-                leftTerm = Term.precedenceOperationTotal(
+                leftTerm = Term.precedenceOperation(
                     leftTerm: self.low.leftTerm,
                     operator_: self.low.operator_!,
                     rightTerm: {
@@ -126,7 +126,7 @@ class PrecedenceOperationController: EvaluateNewOperator, RemovePrecedenceOperat
                 )
             }
             else {
-                leftTerm = Term.precedenceOperationTotal(
+                leftTerm = Term.precedenceOperation(
                     leftTerm: self.low.leftTerm,
                     operator_: self.low.operator_!,
                     rightTerm: self.high.leftTerm
@@ -135,7 +135,7 @@ class PrecedenceOperationController: EvaluateNewOperator, RemovePrecedenceOperat
         }
         else {
             if self.high.rightTermIsSet {
-                leftTerm = Term.precedenceOperationTotal(
+                leftTerm = Term.precedenceOperation(
                     leftTerm: self.high.leftTerm,
                     operator_: self.high.operator_!,
                     rightTerm: self.high.rightTerm
@@ -160,7 +160,7 @@ class PrecedenceOperationController: EvaluateNewOperator, RemovePrecedenceOperat
         }
         else {
             switch self.low.leftTerm {
-            case .precedenceOperationTotal(let leftTerm_, let operator_, let rightTerm):
+            case .precedenceOperation(let leftTerm_, let operator_, let rightTerm):
                 self.low.leftTerm = leftTerm_
                 self.low.operator_ = operator_
                 leftTerm = rightTerm

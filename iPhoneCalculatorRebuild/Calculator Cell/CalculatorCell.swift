@@ -1241,4 +1241,3 @@ enum CalculatorCell: AttributedString, CellAppearence, ToggledValue {
         }
     }
 }
-

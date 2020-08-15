@@ -21,7 +21,7 @@ enum Term {
     case percentageFunction(PercentageFunction)
     case trigonometricFunction(TrigonometricFunction)
     indirect case finalExpression(Term)
-    indirect case precedenceOperationTotal(leftTerm: Term, operator_: CalculatorCell.Operator, rightTerm: Term)
+    indirect case precedenceOperation(leftTerm: Term, operator_: CalculatorCell.Operator, rightTerm: Term)
     
     //MARK: - Init Methods
     
@@ -129,7 +129,7 @@ enum Term {
             return solver.solve()
         case .percentageFunction(let function):
             return function.doubleValue()
-        case .precedenceOperationTotal(let leftTerm, let operator_, let rightTerm):
+        case .precedenceOperation(let leftTerm, let operator_, let rightTerm):
             return operator_.evaluate(leftTermDouble: leftTerm.doubleValue, rightTermDouble: rightTerm.doubleValue)
         case .ThisTermNeedsToBeSet:
             return nil
@@ -185,7 +185,7 @@ enum Term {
             
             let number: NSNumber = NSNumber(value: double)
             return number
-        case .precedenceOperationTotal(let leftTerm, let operator_, let rightTerm):
+        case .precedenceOperation(let leftTerm, let operator_, let rightTerm):
             guard let double = operator_.evaluate(leftTermDouble: leftTerm.doubleValue, rightTermDouble: rightTerm.doubleValue) else { return nil }
             
             let number: NSNumber = NSNumber(value: double)

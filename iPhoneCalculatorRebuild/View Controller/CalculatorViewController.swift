@@ -45,14 +45,16 @@ class CalculatorViewController: UIViewController {
 
     override func viewLayoutMarginsDidChange() {
         //1.Deactive orientation-specific constraints if needed
-        constraints.deactivateOrientationConstraints()
-        constraints.deactiveatePostCollectionViewLoadingConstraints()
+        self.constraints.deactivateOrientationConstraints()
+        self.constraints.deactiveatePostCollectionViewLoadingConstraints()
         
         //2.Update current calculator
         Calculators.active = self.view.frame.height < self.view.frame.width ? .Scientific : .Standard
 
-        //3.Call layoutMarginsDidChange for subviews
+        //3.Update active calculator-specific constraints
         self.constraints.activateOrientationConstraints()
+        
+        //4.Call layoutMarginsDidChange for subviews
         self.labelView.layoutMarginsDidChange()
         self.scientificCalculatorCollectionView.layoutMarginsDidChange()
         self.standardCalculatorCollectionView.layoutMarginsDidChange()
