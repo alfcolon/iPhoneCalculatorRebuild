@@ -134,46 +134,4 @@ extension CalculatorViewController: UICollectionViewDelegate {
         //4.Update outputLabel text
         self.labelView.outputLabel.updateText()
     }
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        //1.Set up variable for calculatorCell to be handled by CalculatorBrain
-//        guard let calculatorCollectionViewCell = collectionView.cellForItem(at: indexPath) as? CalculatorCollectionViewCell else { return }
-//
-//        //Avoid updating an "Error" unless its to clear it out
-//        if self.labelView.outputLabel.text == "Error" && calculatorCollectionViewCell.calculatorCell.isClear == false { return }
-//
-//        //2.Take care of any view realted actions
-//        let dispatch = DispatchQueue(label: "Update Solving Logic")
-//        dispatch.async {
-//            self.calculatorBrain.evaluateSelectedCalculatorCell(calculatorCollectionViewCell.calculatorCell)
-//            DispatchQueue.main.async {
-//                self.labelView.outputLabel.updateText()
-//            }
-//            print("updated cells")
-//        }
-//
-//        switch collectionView {
-//        case self.scientificCalculatorCollectionView:
-//            self.scientificCalculatorCollectionView.manageTrackedCalculatorCellsAppearence(selectedCellIndex: indexPath.item)
-//        case self.standardCalculatorCollectionView:
-//            self.standardCalculatorCollectionView.manageTrackedCalculatorCellsAppearence(selectedCellIndex: indexPath.item)
-//        default:
-//            break
-//        }
-////        let updateCells = DispatchQueue.init(label: "updateCollectionViewCells")
-//        let updateSolvingLogic = BlockOperation {
-//
-//            print("updated solving logic")
-//        }
-//
-//
-////        //3.Send calculatorCell sent off to calculatorBrain
-////        print("calculatorCell:\t\(calculatorCollectionViewCell.calculatorCell.attributedString.string)")
-////        let updateLabel = BlockOperation {  }
-////        updateLabel.addDependency(updateSolvingLogic)
-//
-////        let operationQueue = OperationQueue()
-////        operationQueue.addOperations([updateSolvingLogic, updateCollectionViewCells, updateLabel], waitUntilFinished: false)
-//
-//        print("updated label")
-//    }
 }
