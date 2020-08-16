@@ -19,7 +19,6 @@ class MutableOperand: SignCanToggle, DoubleValue {
     //MARK: - Init
     
     init(decimal: CalculatorCell.Decimal?, startingDigit: CalculatorCell.Digit, toggleSign: Bool) {
-        
         self.decimal = decimal == nil ? false : true
         
         self.fractionArray = []

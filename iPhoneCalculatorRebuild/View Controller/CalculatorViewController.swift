@@ -111,13 +111,21 @@ extension CalculatorViewController: UICollectionViewDataSource {
 
 extension CalculatorViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //1.Set up variable for calculatorCell to be handled by CalculatorBrain
         guard let calculatorCollectionViewCell = collectionView.cellForItem(at: indexPath) as? CalculatorCollectionViewCell else { return }
 
         //Avoid updating an "Error" unless its to clear it out
         if self.labelView.outputLabel.text == "Error" && calculatorCollectionViewCell.calculatorCell.isClear == true { return }
-
-        //2.Take care of any view realted actions
+        
+        //Concurrently update solving logic, then update the outputalabel
+        let dispatch = DispatchQueue(label: "UpdateSolvingLogic")
+        dispatch.async {
+            self.calculatorBrain.evaluateSelectedCalculatorCell(calculatorCollectionViewCell.calculatorCell)
+            DispatchQueue.main.async {
+                self.labelView.outputLabel.updateText()
+            }
+        }
+        
+        //Update the collectionView whilst the solving logic is being updated.
         switch collectionView {
         case self.scientificCalculatorCollectionView:
             self.scientificCalculatorCollectionView.manageTrackedCalculatorCellsAppearence(selectedCellIndex: indexPath.item)
@@ -127,11 +135,6 @@ extension CalculatorViewController: UICollectionViewDelegate {
             break
         }
 
-        //3.Send calculatorCell sent off to calculatorBrain
         print("calculatorCell:\t\(calculatorCollectionViewCell.calculatorCell.attributedString.string)")
-        self.calculatorBrain.evaluateSelectedCalculatorCell(calculatorCollectionViewCell.calculatorCell)
-
-        //4.Update outputLabel text
-        self.labelView.outputLabel.updateText()
     }
 }
