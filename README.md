@@ -1,6 +1,6 @@
 iPhone Calculator Rebuild
 ======
-A first to ~~market~~ GitHub near replica of the iPhone Calculator built entirely from scratch by moi. It includes both the standard and scientific calculator with some updates to the calculating logic.
+A first to ~~market~~ GitHub (🎉) near replica of the iPhone Calculator built entirely from scratch by moi!
 
 #### Scientific Calculator
 ![Screenshot Scientific Calculator](https://i.ibb.co/5hZQ155/Screen-Shot-2020-10-12-at-11-59-25-PM.png)
