@@ -40,8 +40,7 @@ class MutableOperand: SignCanToggle, DoubleValue {
     }
     
     func addDigit(digit: CalculatorCell.Digit) {
-        guard !self.decimal else { return self.fractionArray.append(digit.rawValue) }
-        
+        //1. First check that the mutable operand hasn't reached it's character limit
         let digitCount: Int = self.fractionArray.count + self.integerArray.count
         
         switch Calculators.active {
@@ -51,6 +50,10 @@ class MutableOperand: SignCanToggle, DoubleValue {
             guard digitCount < StandardCalculator.numberFormatter.decimalDigitMaximum else { return }
         }
         
+        //2. Then check if the digit needs to be added to as a fraction
+        guard !self.decimal else { return self.fractionArray.append(digit.rawValue) }
+        
+        //3. Then add digit as long as it isn't a double zero situation
         if integerArray == ["0"] {
             integerArray[0] = digit.rawValue
         }

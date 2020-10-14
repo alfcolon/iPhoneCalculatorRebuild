@@ -482,9 +482,9 @@ class ScientificCalculatorNumberFormatter: NumberFormatter {
     
     //MARK: - Properties
 
-    var decimalMaximum: Double = 999999999999999
-    var decimalMinimum: Double = -999999999999999
-    var decimalDigitMaximum: Int = 13
+    var decimalMaximum: Double = 9999999999999978
+    var decimalMinimum: Double = -9999999999999978
+    var decimalDigitMaximum: Int = 16
     
     //MARK: - Init
     
@@ -532,7 +532,7 @@ class ScientificCalculatorNumberFormatter: NumberFormatter {
         //Decimal
         else {
             self.maximumIntegerDigits = integerDigits < self.decimalDigitMaximum ? integerDigits : self.decimalDigitMaximum
-            self.minimumIntegerDigits = integerDigits < self.decimalDigitMaximum ? integerDigits : self.decimalDigitMaximum
+//            self.minimumIntegerDigits = integerDigits < self.decimalDigitMaximum ? integerDigits : self.decimalDigitMaximum
             
             let availableDigits: Int = self.decimalDigitMaximum
             self.maximumFractionDigits = availableDigits < fractionDigits ? availableDigits : fractionDigits
