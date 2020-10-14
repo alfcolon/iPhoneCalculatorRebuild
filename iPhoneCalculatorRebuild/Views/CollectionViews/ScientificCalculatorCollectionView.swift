@@ -135,6 +135,7 @@ class ScientificCalculatorCollectionView: UICollectionView, ManageScientificCalc
             self.toggleSIUnit()
         case .toggleSecondSetOfFunctions:
             self.toggleSecondSetOfFunctions()
+            selectedCell.appearsToBeSelected.toggle()
         default:
             break
         }
@@ -208,7 +209,6 @@ class ScientificCalculatorCollectionView: UICollectionView, ManageScientificCalc
         if cell24.appearsToBeSelected == true {
             cell24.appearsToBeSelected.toggle()
         }
-        
     }
     
     func toggleSIUnit() {
