@@ -12,6 +12,7 @@ class OutputLabelLandscapeConstraints: CalculatorConstraints {
     
     //MARK: - Properties
 
+    let leading: NSLayoutConstraint
     let top: NSLayoutConstraint
     let width: NSLayoutConstraint
     var trailing: NSLayoutConstraint?
@@ -21,6 +22,8 @@ class OutputLabelLandscapeConstraints: CalculatorConstraints {
     override init(viewControllerDelegate: CalculatorViewController) {
         let labelView: LabelView! = viewControllerDelegate.labelView
         let outputLabel: OutputLabel! = labelView!.outputLabel
+        
+        self.leading = outputLabel.leadingAnchor.constraint(greaterThanOrEqualTo: labelView.leadingAnchor)
         
         self.top = outputLabel.topAnchor.constraint(equalTo: labelView.topAnchor, constant: 0)
         

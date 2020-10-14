@@ -9,6 +9,7 @@
 import Foundation
 
 struct StartingValues: Codable {
+    // Set these values as optional in case they are set to an "Error" (nil) value
     var startingTermDouble: Double?
     var memoryRecallDouble: Double?
     
@@ -60,7 +61,12 @@ class CalculatorBrain: PersistStartingValues {
                 self.arithmeticController.clearLastTerm()
             }
         case .constant(let constantType):
-            self.arithmeticController.addCalculatorEntry(constantType: constantType)
+            switch constantType {
+            case .RandomNumber:
+                self.arithmeticController.addCalculatorEntry(double: Double.random(in: 0..<1))
+            default:
+                self.arithmeticController.addCalculatorEntry(constantType: constantType)
+            }
         case .decimal(let decimal):
             self.arithmeticController.addCalculatorEntry(decimal: decimal)
         case .digit(let digit):

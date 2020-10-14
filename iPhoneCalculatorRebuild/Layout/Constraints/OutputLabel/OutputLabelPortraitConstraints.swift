@@ -13,6 +13,7 @@ class OutputLabelPortraitConstraints: CalculatorConstraints {
     //MARK: - Properties
     
     let width: NSLayoutConstraint
+    var leading: NSLayoutConstraint?
     var trailing: NSLayoutConstraint?
 
     //MARK: - Init
@@ -29,6 +30,34 @@ class OutputLabelPortraitConstraints: CalculatorConstraints {
 
         self.width = outputLabel.widthAnchor.constraint(lessThanOrEqualToConstant: width - cellHeight / 2)
         super.init(viewControllerDelegate: viewControllerDelegate)
+    }
+    
+    //MARK: - Trailing Constraint Methods
+    
+    func activateLeadingConstraint() {
+        guard self.leading == nil else { return }
+        
+        self.updateLeadingConstraint()
+        
+        guard self.leading != nil else { return }
+        
+        NSLayoutConstraint.activate([self.leading!])
+    }
+    
+    func deactivateLeadingConstraint() {
+        guard self.leading != nil else { return }
+        
+        NSLayoutConstraint.deactivate([self.leading!])
+        
+        self.leading = nil
+    }
+    
+    func updateLeadingConstraint() {
+        guard let clearCellLabel: CalculatorCollectionViewCellLabel = viewControllerDelegate.standardCalculatorCollectionView.trackedViewCells[0]?.label else { return }
+        
+        let outputLabel: OutputLabel! = viewControllerDelegate.labelView.outputLabel
+        
+        self.leading = outputLabel.leadingAnchor.constraint(equalTo: clearCellLabel.leadingAnchor)
     }
     
     //MARK: - Trailing Constraint Methods

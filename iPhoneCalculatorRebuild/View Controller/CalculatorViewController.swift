@@ -116,7 +116,7 @@ extension CalculatorViewController: UICollectionViewDelegate {
         //Avoid updating an "Error" unless its to clear it out
         if self.labelView.outputLabel.text == "Error" && calculatorCollectionViewCell.calculatorCell.isClear == true { return }
         
-        //Concurrently update solving logic, then update the outputalabel
+        //Concurrently update solving logic, then update the output label
         let dispatch = DispatchQueue(label: "UpdateSolvingLogic")
         dispatch.async {
             self.calculatorBrain.evaluateSelectedCalculatorCell(calculatorCollectionViewCell.calculatorCell)

@@ -9,7 +9,7 @@
 import Foundation
 
 enum Term {
-    case ThisTermNeedsToBeSet
+    case ThisTermNeedsToBeSet // Used this case instead of an optional as I ran into an issue when sending the address for a optional value (it was pointint to nil)
     case constantOperand(Constant)
     case fixedOperand(FixedOperand)
     case functionWithOneInput(FunctionWithOneInput)

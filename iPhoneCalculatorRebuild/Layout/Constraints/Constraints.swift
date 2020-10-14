@@ -42,6 +42,7 @@ class Constraints {
         case .Scientific:
             NSLayoutConstraint.activate([
                 self.labelView.landscape.height,
+                self.outputLabel.landscape.leading,
                 self.outputLabel.landscape.top,
                 self.outputLabel.landscape.width
             ])
@@ -50,6 +51,7 @@ class Constraints {
                 self.outputLabel.portrait.width,
                 self.standardCalculatorCollectionView.portrait.height
             ])
+            self.outputLabel.portrait.activateLeadingConstraint()
         }
     }
     
@@ -58,6 +60,7 @@ class Constraints {
         case .Scientific:
             NSLayoutConstraint.deactivate([
                 self.labelView.landscape.height,
+                self.outputLabel.landscape.leading,
                 self.outputLabel.landscape.top,
                 self.outputLabel.landscape.width
             ])
@@ -66,6 +69,7 @@ class Constraints {
                 self.outputLabel.portrait.width,
                 self.standardCalculatorCollectionView.portrait.height
             ])
+            self.outputLabel.portrait.deactivateLeadingConstraint()
         }
     }
 
@@ -120,7 +124,7 @@ class Constraints {
             self.labelView.universal.top,
             self.labelView.universal.trailing,
             self.outputLabel.universal.bottom,
-            self.outputLabel.universal.leading,
+//            self.outputLabel.universal.leading,
             self.scientificCalculatorCollectionView.universal.bottom,
             self.scientificCalculatorCollectionView.universal.leading,
             self.scientificCalculatorCollectionView.universal.top,

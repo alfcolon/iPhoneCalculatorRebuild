@@ -12,6 +12,7 @@ class StandardCalculator {
      
     //MARK: - Properties
     
+    static let reuseIdentifier = "StandardCalculatorCell"
     static var calculatorCells: [Int : CalculatorCell] {
         [
         0: CalculatorCell.clear(CalculatorCell.Clear.AllClear),
@@ -36,7 +37,6 @@ class StandardCalculator {
         ]
     }
     static var numberFormatter = StandardCalculatorNumberFormatter()
-    static let reuseIdentifier = "StandardCalculatorCell"
 
     //MARK: - AttributedStringFormatter
     
@@ -323,7 +323,7 @@ class StandardCalculatorNumberFormatter: NumberFormatter {
         //Decimal
         else {
             self.maximumIntegerDigits = integerDigits < self.decimalDigitMaximum ? integerDigits : self.decimalDigitMaximum
-            self.maximumIntegerDigits = integerDigits < self.decimalDigitMaximum ? integerDigits : self.decimalDigitMaximum
+            self.minimumIntegerDigits = integerDigits < self.decimalDigitMaximum ? integerDigits : self.decimalDigitMaximum
             
             let availableDigits: Int = self.decimalDigitMaximum
             self.maximumFractionDigits = availableDigits < fractionDigits ? availableDigits : fractionDigits

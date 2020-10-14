@@ -532,7 +532,7 @@ class ScientificCalculatorNumberFormatter: NumberFormatter {
         //Decimal
         else {
             self.maximumIntegerDigits = integerDigits < self.decimalDigitMaximum ? integerDigits : self.decimalDigitMaximum
-            self.maximumIntegerDigits = integerDigits < self.decimalDigitMaximum ? integerDigits : self.decimalDigitMaximum
+            self.minimumIntegerDigits = integerDigits < self.decimalDigitMaximum ? integerDigits : self.decimalDigitMaximum
             
             let availableDigits: Int = self.decimalDigitMaximum
             self.maximumFractionDigits = availableDigits < fractionDigits ? availableDigits : fractionDigits
