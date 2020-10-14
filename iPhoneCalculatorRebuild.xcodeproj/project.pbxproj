@@ -806,7 +806,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 955MLY2U7C;
-				INFOPLIST_FILE = iPhoneCalculatorRebuildTests/Info.plist;
+				INFOPLIST_FILE = iPhoneCalculatorRebuild/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -827,7 +827,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 955MLY2U7C;
-				INFOPLIST_FILE = iPhoneCalculatorRebuildTests/Info.plist;
+				INFOPLIST_FILE = iPhoneCalculatorRebuild/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
