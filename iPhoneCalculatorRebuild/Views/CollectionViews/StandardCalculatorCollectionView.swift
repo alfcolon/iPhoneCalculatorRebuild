@@ -96,6 +96,9 @@ class StandardCalculatorCollectionView: UICollectionView, ManageStandardCalculat
     func manageTrackedCalculatorCellsAppearence(selectedCellIndex: Int) {
         guard self.visibleCells.count == 19 else { return }
         
+        //Deselect a functionWithTwoInputs if need be
+        self.viewControllerDelegate.scientificCalculatorCollectionView.deselectAllCellsThatAppearToBeSelectedIfNeeded()
+        
         let selectedCell: CalculatorCollectionViewCell! = self.trackedViewCells[selectedCellIndex]
         
         switch selectedCell.calculatorCell {
