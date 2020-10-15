@@ -118,7 +118,8 @@ class LabelView: UIView, EditOutputLabelText, OutputLabelMenuController {
     @objc internal func pasteText() {
         guard self.menuController.copiedDouble != nil else { return }
         
-        self.outputLabel.outputTerm = Term.init(double: self.menuController.copiedDouble!)
+        self.delegate.calculatorBrain.arithmeticController.addCalculatorEntry(double: self.menuController.copiedDouble)
+//        self.outputLabel.outputTerm.updateTerm(to: self.menuController.copiedDouble)
         self.outputLabel.updateText()
     }
 
