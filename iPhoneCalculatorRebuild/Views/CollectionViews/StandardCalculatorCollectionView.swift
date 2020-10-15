@@ -105,7 +105,9 @@ class StandardCalculatorCollectionView: UICollectionView, ManageStandardCalculat
         case .clear(let clearType):
             switch clearType {
             case .AllClear:
-                return self.deselectAllCellsThatAppearToBeSelectedIfNeeded()
+                self.viewControllerDelegate.scientificCalculatorCollectionView.deselectAllCellsThatAppearToBeSelectedIfNeeded()
+                self.deselectAllCellsThatAppearToBeSelectedIfNeeded()
+                return
             case .ClearEntry:
                  return selectedCell.toggleCalculatorCellValue()
             }

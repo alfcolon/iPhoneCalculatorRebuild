@@ -69,7 +69,12 @@ class ScientificCalculatorCollectionView: UICollectionView, ManageScientificCalc
     func deselectAllCellsThatAppearToBeSelectedIfNeeded() {
         for cell in self.trackedViewCells.values {
             if cell.appearsToBeSelected {
-                cell.appearsToBeSelected = false
+                switch cell.calculatorCell {
+                case .toggleSecondSetOfFunctions:
+                    break
+                default:
+                    cell.appearsToBeSelected = false
+                }
             }
         }
     }
