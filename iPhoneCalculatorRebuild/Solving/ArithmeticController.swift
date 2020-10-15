@@ -225,14 +225,27 @@ class ArithmeticController: AddCalculatorEntry, AddParentheticalExpression, Clea
             3. The addParentheticalExpression will be added to the nestedInputController
      */
     func addParentheticalExpression() {
-        let precedenceOperationsController: PrecedenceOperationController! = self.precedenceOperations[self.parentheticalExpressionIndex]
-        let precedenceOperation: PrecedenceOperation = precedenceOperationsController.currentPrecedenceOperation
+        let currentPrecedenceOperationsController: PrecedenceOperationController! = self.precedenceOperations[self.parentheticalExpressionIndex]
         
-        //1.Check for a nestedArithmeticController
+        // Add an empty parenthetical stack if the current one is empty
+        if currentPrecedenceOperationsController.precedenceOperationStarted == false {
+            self.parentheticalExpressionIndex += 1
+            self.precedenceOperations[self.parentheticalExpressionIndex] = PrecedenceOperationController(startingTerm: nil)
+            return
+        }
+        
+        // Add an empty parenthetical stack if the last calculator entry was an operator
+        let precedenceOperation: PrecedenceOperation = currentPrecedenceOperationsController.currentPrecedenceOperation
+        if precedenceOperation.rightTermIsSet == false && precedenceOperation.operator_ != nil {
+            self.parentheticalExpressionIndex += 1
+            self.precedenceOperations[self.parentheticalExpressionIndex] = PrecedenceOperationController(startingTerm: nil)
+            return
+        }
+        
+        // Check for a nestedArithmeticController
         let termPointer: UnsafeMutablePointer<Term> = precedenceOperation.pointerToTermToUpdate
         
         switch termPointer.pointee {
-        
         case .functionWithTwoInputs(let function):
             switch function.input2 {
             case .ThisTermNeedsToBeSet:
@@ -253,8 +266,8 @@ class ArithmeticController: AddCalculatorEntry, AddParentheticalExpression, Clea
             break
         }
         
-        //2.Add parentheticalExpression to the current stack
-        let startingTerm: Term? = precedenceOperationsController.getStartingTerm()
+        // Otherwise add a parentheticalExpression with the starting term from the last precedence operation
+        let startingTerm: Term? = currentPrecedenceOperationsController.getStartingTerm()
         self.parentheticalExpressionIndex += 1
         self.precedenceOperations[self.parentheticalExpressionIndex] = PrecedenceOperationController(startingTerm: startingTerm)
     }
@@ -285,35 +298,44 @@ class ArithmeticController: AddCalculatorEntry, AddParentheticalExpression, Clea
     }
     
     //MARK: - CloseParentheticalExpression
-
+    
     func closeParentheticalExpression() {
-        //1. if current index if zero check if nestedArithmeticController should be closed
+        // If current index if zero check if nestedArithmeticController should be closed
         guard self.parentheticalExpressionIndex > 0 else { return self.closeNestedArithmeticControllerIfNeeded() }
         
-        //2.Add outputTerm if needed
+        let currentPrecedenceOperationController: PrecedenceOperationController! = self.precedenceOperations[self.parentheticalExpressionIndex]
+        
+        // Handle an empty parenthetical expression
+        if currentPrecedenceOperationController.precedenceOperationStarted == false {
+            self.precedenceOperations.removeValue(forKey: self.parentheticalExpressionIndex)
+            self.parentheticalExpressionIndex -= 1
+            return
+        }
+        
+        // Add outputTerm if needed
         self.addOutputTermIfNeeded()
         
-        //3.Evaluate last parenthetical stack
+        // Evaluate last parenthetical stack
         let precedenceOperationController: PrecedenceOperationController! = self.precedenceOperations[self.parentheticalExpressionIndex]
         
         let solver = ShuntingYardsSolver()
         let precedenceOperations: [Int : PrecedenceOperationController] = [0 : precedenceOperationController]
         
-        //Send the last precedenceOperationsController to be evaluated
+        // Send the last precedenceOperationsController to be evaluated
         solver.updateProperties(with: precedenceOperations, index: 0)
         
-        //Setup a term with the evaluated total
+        // Setup a term with the evaluated total
         let evaluatedTotalDouble: Double? = solver.solve()
         let term: Term! = Term.init(double: evaluatedTotalDouble)
         
-        //4.Reduce the index
+        // Reduce the index
         self.precedenceOperations.removeValue(forKey: self.parentheticalExpressionIndex)
         self.parentheticalExpressionIndex -= 1
         
-        //5.Add the evaluated total to the current precedence operation
+        // Add the evaluated total to the current precedence operation
         self.precedenceOperations[self.parentheticalExpressionIndex]?.addTerm(term: term)
         
-        //6.Output the total of the evaluated parenthetical expression
+        // Output the total of the evaluated parenthetical expression
         self.outputLabelDelegate.outputTerm = term
     }
     
@@ -555,16 +577,19 @@ class ArithmeticController: AddCalculatorEntry, AddParentheticalExpression, Clea
     func addLastTermToEmptyParentheticalStackOrRemoveLastOperatorIfNeeded(functionWithTwoInputs: Bool) {
         let currentPrecedenceOperations: PrecedenceOperationController! = self.precedenceOperations[self.parentheticalExpressionIndex]
         let currentPrecedenceOperation: PrecedenceOperation! = currentPrecedenceOperations.currentPrecedenceOperation
-        
+    
+        // Case: auto-correcting an operator in a empty parentheticalstack by bringing the last term and setting it as the left term
         if self.parentheticalExpressionIndex > 0 && currentPrecedenceOperation.operationStarted == false {
-            self.moveLastPrecedenceOperationToCurrentPrecedenceOperation()
+//            return self.moveLastPrecedenceOperationToCurrentPrecedenceOperation()
+            return self.moveLastTermToCurrentPrecedenceOperation()
         }
         
+        // Case: an functionWithTwoInputs entry is added after an operator
+        // the operator is deleted and the
         if functionWithTwoInputs && currentPrecedenceOperation.operator_ !=  nil {
             currentPrecedenceOperation.operator_ = nil
         }
-        
-        //
+
         //replace function with two inputs to input1
         var termPointer: UnsafeMutablePointer<Term>! = currentPrecedenceOperation.pointerToTermToUpdate
         switch termPointer.pointee {
@@ -594,25 +619,16 @@ class ArithmeticController: AddCalculatorEntry, AddParentheticalExpression, Clea
         /*
          OutputTerms are added after an = or ) calculatorCell is pressed.
          They are added for:
-            - Empty parenthetical stack
             - when the last entry was an operator
-            - or as a input2 if no term has been set
+            - or as an input2 if no term has been set
          */
-        //- Empty parenthetical stack
-        if self.precedenceOperationsHaveStarted == false {
+        // when the last entry was an operator
+        if currentPrecedenceOperation.lastEntryWasOperator || currentPrecedenceOperation.operationStarted == false {
             return self.addCalculatorEntry(double: self.outputLabelDelegate.outputTerm.doubleValue)
         }
-        //- when the last entry was an operator
-        else if currentPrecedenceOperation.lastEntryWasOperator || currentPrecedenceOperation.operationStarted == false {
-            return self.addCalculatorEntry(double: self.outputLabelDelegate.outputTerm.doubleValue)
-        }
-        
-        let termPointer: UnsafeMutablePointer<Term> = currentPrecedenceOperation.pointerToTermToUpdate
-        
-        switch termPointer.pointee {
         //- or as a input2 if no term has been set
-        case .ThisTermNeedsToBeSet:
-            termPointer.pointee.updateTerm(to: self.outputLabelDelegate.outputTerm.doubleValue)
+        let termPointer: UnsafeMutablePointer<Term> = currentPrecedenceOperation.pointerToTermToUpdate
+        switch termPointer.pointee {
         case .functionWithTwoInputs(let function):
             switch function.input2 {
             case .ThisTermNeedsToBeSet:
@@ -627,12 +643,40 @@ class ArithmeticController: AddCalculatorEntry, AddParentheticalExpression, Clea
         }
     }
     
-    func moveLastPrecedenceOperationToCurrentPrecedenceOperation() {
-        let currentPrecedenceOperations: PrecedenceOperationController! = self.precedenceOperations[self.parentheticalExpressionIndex]
-        let lastPrecedenceOperation: PrecedenceOperation! = self.precedenceOperations[self.parentheticalExpressionIndex - 1]?.removeCurrentPrecedenceOperation()
+    func moveLastTermToCurrentPrecedenceOperation() {
+        let currentPrecedenceOperationController: PrecedenceOperationController! = self.precedenceOperations[self.parentheticalExpressionIndex]
+        let lastPrecedenceOperationControllerWithValues: PrecedenceOperationController! = self.getLastPrecedenceOperationControllerWithValues()
+        let lastPrecedenceOperationWithValues: PrecedenceOperation = lastPrecedenceOperationControllerWithValues.high.operationStarted ? lastPrecedenceOperationControllerWithValues.high : lastPrecedenceOperationControllerWithValues.low
 
-        lastPrecedenceOperation.operator_ = nil
-
-        currentPrecedenceOperations.replaceCurrentPrecedenceOperation(with: lastPrecedenceOperation)
+        if lastPrecedenceOperationWithValues.rightTermIsSet {
+            currentPrecedenceOperationController.addTerm(term: lastPrecedenceOperationWithValues.rightTerm)
+            lastPrecedenceOperationWithValues.rightTerm = Term.ThisTermNeedsToBeSet
+            lastPrecedenceOperationWithValues.operator_ = nil
+        }
+        else {
+            switch lastPrecedenceOperationWithValues.leftTerm {
+            case .precedenceOperation(let leftTerm, let operator_, let rightTerm):
+                lastPrecedenceOperationWithValues.leftTerm = leftTerm
+                lastPrecedenceOperationWithValues.operator_ = operator_
+                currentPrecedenceOperationController.addTerm(term: rightTerm)
+            default:
+                currentPrecedenceOperationController.addTerm(term: lastPrecedenceOperationWithValues.leftTerm)
+                lastPrecedenceOperationWithValues.leftTerm = Term.ThisTermNeedsToBeSet
+                lastPrecedenceOperationWithValues.operator_ = nil
+            }
+        }
+    }
+    
+    func getLastPrecedenceOperationControllerWithValues() -> PrecedenceOperationController {
+        var index = self.parentheticalExpressionIndex - 1
+        while index >= 0 {
+            let precedenceOperationController: PrecedenceOperationController! = self.precedenceOperations[index]
+            if precedenceOperationController.precedenceOperationStarted {
+                return precedenceOperationController
+            }
+            index -= 1
+        }
+        // This will actually never get called
+        return PrecedenceOperationController(startingTerm: nil)
     }
 }

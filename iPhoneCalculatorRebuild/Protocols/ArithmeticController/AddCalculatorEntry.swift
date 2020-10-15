@@ -19,7 +19,7 @@ protocol AddCalculatorEntry {
     func addCalculatorEntry(percentageFunction: CalculatorCell.PercentageFunction)
     func addCalculatorEntry(trigonometricFunction: CalculatorCell, siUnit: CalculatorCell.SIUnit)
     func addLastTermToEmptyParentheticalStackOrRemoveLastOperatorIfNeeded(functionWithTwoInputs: Bool)
-    func moveLastPrecedenceOperationToCurrentPrecedenceOperation()
+    func moveLastTermToCurrentPrecedenceOperation()
     var lastPrecedenceTermPointer: UnsafeMutablePointer<Term> { get }
     var lastPrecedenceOrOutputTermPointer: UnsafeMutablePointer<Term> { get }
     var precedenceOperationsHaveStarted: Bool { get }
