@@ -120,4 +120,5 @@ A parenthetical or precedence total will be displayed when an operator is tapped
 
 ### Swipe to Delete
 Users can also delete numbers that they've entered in via left swiping. Once each number is deleted, a zero will replace the number. A negative sign can also be removed once all digits have been removed by swiping left on the negative symbol.
+
 <img src="https://media.giphy.com/media/95etPFbzHGSAC8gPTi/giphy.gif" width="700" height="350"/>
