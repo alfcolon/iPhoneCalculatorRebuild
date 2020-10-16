@@ -574,6 +574,38 @@ class ArithmeticController: AddCalculatorEntry, AddParentheticalExpression, Clea
         }
     }
 
+    func autocorrectArithmeticLogicIfNeeded(for functionWithTwoInputs: Bool) {
+        let currentPrecedenceOperations: PrecedenceOperationController! = self.precedenceOperations[self.parentheticalExpressionIndex]
+        let currentPrecedenceOperation: PrecedenceOperation! = currentPrecedenceOperations.currentPrecedenceOperation
+        
+        // Case: an functionWithTwoInputs entry is added after an operator
+        // the operator is deleted and the
+        if functionWithTwoInputs && currentPrecedenceOperation.operator_ !=  nil {
+            currentPrecedenceOperation.operator_ = nil
+        }
+
+        //replace function with two inputs to input1
+        var termPointer: UnsafeMutablePointer<Term>! = currentPrecedenceOperation.pointerToTermToUpdate
+        switch termPointer.pointee {
+        case .functionWithTwoInputs(let function):
+            switch function.input2 {
+            case .nestedArithmeticController(let arithmeticController):
+                if arithmeticController.precedenceOperationsHaveStarted == false {
+                    fallthrough
+                }
+                else {
+                    termPointer = UnsafeMutablePointer<Term>(&function.input2)
+                }
+            case .ThisTermNeedsToBeSet:
+                termPointer.pointee.updateTerm(to: function.input1)
+            default:
+                break
+            }
+        default:
+            break
+        }
+    }
+    
     func addLastTermToEmptyParentheticalStackOrRemoveLastOperatorIfNeeded(functionWithTwoInputs: Bool) {
         let currentPrecedenceOperations: PrecedenceOperationController! = self.precedenceOperations[self.parentheticalExpressionIndex]
         let currentPrecedenceOperation: PrecedenceOperation! = currentPrecedenceOperations.currentPrecedenceOperation
@@ -586,7 +618,7 @@ class ArithmeticController: AddCalculatorEntry, AddParentheticalExpression, Clea
         
         // Case: an functionWithTwoInputs entry is added after an operator
         // the operator is deleted and the
-        if functionWithTwoInputs && currentPrecedenceOperation.operator_ !=  nil {
+        if functionWithTwoInputs && currentPrecedenceOperation.operator_ ==  nil {
             currentPrecedenceOperation.operator_ = nil
         }
 
