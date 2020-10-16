@@ -1,6 +1,6 @@
 iPhone Calculator Rebuild
 ======
-A reverse engineered first to ~~market~~ GitHub (🎉) near replica of the iPhone Calculator built entirely from scratch by moi!
+A reverse engineered first to ~~market~~ GitHub (🎉) near replica of the iPhone Calculator built entirely from scratch by moi! The Calculator App features a standard calculator accessible in portrait and a scientific calculator accessible in landscape.
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
     <img src="https://i.ibb.co/YjLqqLv/Screen-Shot-2020-10-15-at-4-58-41-PM.png" alt="Screen-Shot-2020-10-15-at-4-58-41-PM" height="400" width="700">
