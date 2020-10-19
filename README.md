@@ -44,12 +44,12 @@ My logic purposely differs from Apple's here.
 |(2601) =|(99) = |
 |(2601xy2)|(99 + 48)|
 |6,765,201|147|
-- Apple's iPhone Calculator's Continued Arithmetic
-  The iPhone Calculator set xy as the final operation pressing "=" continues it
+- __Apple's iPhone Calculator's Continued Arithmetic__
+  The iPhone Calculator will set __xy__ as the final operation pressing "=" continues it
   - its input1 will be the evaluated total (51 first and 2601 second)
   - its input2 will remain 2
-- My iPhone Calculator Rebuild's Continued Arithmetic
-  Technically, since any parenthetical expression after the first parenthetical expression condences down to one term, I create a final operation that takes an operator, left term and right term.
+- __My iPhone Calculator Rebuild's Continued Arithmetic__
+  Technically, since any parenthetical expression after the first parenthetical expression condences down to one term, I create a __final operation__ that takes an operator, left term and right term.
   - the operator is the last operator in the first parenthetical expression (+)
   - the left term is evaluated total of the first parenthetical expression (51)
   - the right term is the evaluated total of anything after the first parenthetical expression (48)
