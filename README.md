@@ -33,7 +33,7 @@ In the case where the last calculator entry was an operator and the "=" or ")" s
 
 ### Continue Arithmetic Between Calculators
 Arithmetic can be carried on between both calculators and the selected cells will be updated appropiately.
-<img src="https://media.giphy.com/media/ZQqygvJVjMtWLSmv9x/giphy.gif" width="700" height="350"/>
+<img src="https://media.giphy.com/media/ZQqygvJVjMtWLSmv9x/giphy.gif" width="700" height="700"/>
 
 ### Continue Last Operation
 To continue the last operation, simply continue tapping the "=" symbol.
