@@ -17,6 +17,7 @@ Erring on the side of caution, I won't even attempt to submit this to the App St
 Feature Overview
 ======
 - [x] Add Displayed Number as Right Term
+- [x] Continue Arithmetic Between Calculators
 - [x] Continue Last Operation
 - [x] Copy and Paste
 - [x] Logic Autocorrect
@@ -29,6 +30,10 @@ Feature Examples
 In the case where the last calculator entry was an operator and the "=" or ")" symbols are tapped, the number displayed will be added to the calculation to close the parenthetical stack or evaluate all expressions. Below are examples of this in action for an "=" and ")".
 <img src="https://media.giphy.com/media/7LpkbWtP6TkbMkVPp4/giphy.gif" width="700" height="350"/>
 <img src="https://media.giphy.com/media/SPuhY0TiLl7IvHj5ZD/giphy.gif" width="700" height="350"/>
+
+### Continue Arithmetic Between Calculators
+Arithmetic can be carried on between both calculators and the selected cells will be updated appropiately.
+<img src="https://media.giphy.com/media/ZQqygvJVjMtWLSmv9x/giphy.gif" width="700" height="350"/>
 
 ### Continue Last Operation
 To continue the last operation, simply continue tapping the "=" symbol.
