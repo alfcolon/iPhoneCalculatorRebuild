@@ -60,6 +60,7 @@
 		387B9FFF25FF26C70071DCF6 /* ContinuedSolvingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9FFE25FF26C70071DCF6 /* ContinuedSolvingTests.swift */; };
 		387BA00425FF26FD0071DCF6 /* LogicAutocorrectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387BA00325FF26FD0071DCF6 /* LogicAutocorrectTests.swift */; };
 		387BA00925FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387BA00825FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift */; };
+		387BA014260017840071DCF6 /* MemoryRecallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387BA013260017840071DCF6 /* MemoryRecallTests.swift */; };
 		387C575E249AA0670058DAB8 /* ArithmeticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387C575D249AA0670058DAB8 /* ArithmeticController.swift */; };
 		3883169424AC5A5E001B644A /* RoundStandardCalculatorCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3883169324AC5A5E001B644A /* RoundStandardCalculatorCollectionViewCells.swift */; };
 		3883169624AC5A7B001B644A /* ManageStandardCalculatorCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3883169524AC5A7B001B644A /* ManageStandardCalculatorCollectionViewCells.swift */; };
@@ -164,6 +165,7 @@
 		387B9FFE25FF26C70071DCF6 /* ContinuedSolvingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuedSolvingTests.swift; sourceTree = "<group>"; };
 		387BA00325FF26FD0071DCF6 /* LogicAutocorrectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicAutocorrectTests.swift; sourceTree = "<group>"; };
 		387BA00825FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentheticalAndPrecedenceTotalDisplaying.swift; sourceTree = "<group>"; };
+		387BA013260017840071DCF6 /* MemoryRecallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryRecallTests.swift; sourceTree = "<group>"; };
 		387C575D249AA0670058DAB8 /* ArithmeticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticController.swift; sourceTree = "<group>"; };
 		3883169324AC5A5E001B644A /* RoundStandardCalculatorCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStandardCalculatorCollectionViewCells.swift; sourceTree = "<group>"; };
 		3883169524AC5A7B001B644A /* ManageStandardCalculatorCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStandardCalculatorCollectionViewCells.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				387B9FF925FF26A20071DCF6 /* AddDisplayedNumberAsTermTests.swift */,
 				387B9FFE25FF26C70071DCF6 /* ContinuedSolvingTests.swift */,
 				387BA00325FF26FD0071DCF6 /* LogicAutocorrectTests.swift */,
+				387BA013260017840071DCF6 /* MemoryRecallTests.swift */,
 				387BA00825FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift */,
 				387B9FB525FF25390071DCF6 /* Info.plist */,
 			);
@@ -693,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				387B9FFF25FF26C70071DCF6 /* ContinuedSolvingTests.swift in Sources */,
+				387BA014260017840071DCF6 /* MemoryRecallTests.swift in Sources */,
 				387BA00925FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift in Sources */,
 				387B9FFA25FF26A20071DCF6 /* AddDisplayedNumberAsTermTests.swift in Sources */,
 				387BA00425FF26FD0071DCF6 /* LogicAutocorrectTests.swift in Sources */,

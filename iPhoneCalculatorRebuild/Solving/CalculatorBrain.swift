@@ -96,7 +96,7 @@ class CalculatorBrain: PersistStartingValues {
 				self.memoryRecall.clear()
 			case .MemoryMinus:
 				let double = self.arithmeticController.outputLabelDelegate.outputTerm.doubleValue
-				self.memoryRecall.addToMemoryRecall(double: double)
+				self.memoryRecall.subtractFromMemoryRecall(double: double)
 			case .MemoryPlus:
 				let double = self.arithmeticController.outputLabelDelegate.outputTerm.doubleValue
 				self.memoryRecall.addToMemoryRecall(double: double)

@@ -39,7 +39,7 @@ class MemoryRecall: SignCanToggle, DoubleValue  {
     }
 
     func subtractFromMemoryRecall(double: Double?) {
-        let total: Double? = CalculatorCell.Operator.Addition.evaluate(leftTermDouble: self.double, rightTermDouble: double)
+        let total: Double? = CalculatorCell.Operator.Subtraction.evaluate(leftTermDouble: self.double, rightTermDouble: double)
         self.double = total
     }
 }
