@@ -7,19 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		380805E42489D00600FAF9BE /* SIUnitLabelUniversalConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380805E32489D00600FAF9BE /* SIUnitLabelUniversalConstraints.swift */; };
-		38097A6524948DD0009712EF /* LabelViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38097A6424948DD0009712EF /* LabelViewConstraints.swift */; };
-		38097A6724948E0F009712EF /* LabelViewLandscapeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38097A6624948E0F009712EF /* LabelViewLandscapeConstraints.swift */; };
-		38097A6924948E34009712EF /* LabelViewUniversalConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38097A6824948E34009712EF /* LabelViewUniversalConstraints.swift */; };
 		38097A6F2494A7B6009712EF /* RadicalViewSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38097A6E2494A7B6009712EF /* RadicalViewSelected.swift */; };
 		38097A712494A7E6009712EF /* RadicalViewDeselected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38097A702494A7E6009712EF /* RadicalViewDeselected.swift */; };
 		38097A732494AF4C009712EF /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38097A722494AF4C009712EF /* LabelView.swift */; };
-		382019FE247DC454004FDE24 /* SIUnitLabelConstraintsLandscapeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382019FD247DC454004FDE24 /* SIUnitLabelConstraintsLandscapeConstraints.swift */; };
-		38201A00247DC465004FDE24 /* SIUnitLabelConstraintsPortraitConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382019FF247DC465004FDE24 /* SIUnitLabelConstraintsPortraitConstraints.swift */; };
-		38201A02247DC486004FDE24 /* ScientificCalculatorCollectionViewLandscapeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201A01247DC486004FDE24 /* ScientificCalculatorCollectionViewLandscapeConstraints.swift */; };
-		38201A08247DC4FC004FDE24 /* StandardCalculatorCollectionViewPortraitConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201A07247DC4FC004FDE24 /* StandardCalculatorCollectionViewPortraitConstraints.swift */; };
-		38201A0A247DC591004FDE24 /* ScientificCalculatorCollectionViewUniversalConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201A09247DC591004FDE24 /* ScientificCalculatorCollectionViewUniversalConstraints.swift */; };
-		38201A12247DCC75004FDE24 /* StandardCalculatorCollectionViewUniversalConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201A11247DCC75004FDE24 /* StandardCalculatorCollectionViewUniversalConstraints.swift */; };
 		38201A3D247DE6BD004FDE24 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201A3C247DE6BC004FDE24 /* Calculator.swift */; };
 		38201A42247DEC15004FDE24 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201A41247DEC15004FDE24 /* CalculatorCell.swift */; };
 		3824326224ACFC1000B6CAAB /* NumberValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3824326124ACFC1000B6CAAB /* NumberValue.swift */; };
@@ -54,12 +44,28 @@
 		387074602499BBAC00C74D25 /* TrigonometricFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870745F2499BBAC00C74D25 /* TrigonometricFunction.swift */; };
 		3870746C2499E21D00C74D25 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870746B2499E21D00C74D25 /* Operation.swift */; };
 		387B4B56247DEE5A003AC960 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B4B55247DEE5A003AC960 /* Colors.swift */; };
+		387B9F4125FF11960071DCF6 /* AccessibilityObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9F4025FF11960071DCF6 /* AccessibilityObjects.swift */; };
+		387B9F4825FF11DD0071DCF6 /* CalculatorCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9F4725FF11DD0071DCF6 /* CalculatorCollectionViewCellModel.swift */; };
+		387B9F4F25FF12110071DCF6 /* CalculatorDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9F4E25FF12110071DCF6 /* CalculatorDatasourceController.swift */; };
+		387B9F7225FF17940071DCF6 /* AttributedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9F7125FF17940071DCF6 /* AttributedStrings.swift */; };
+		387B9F7825FF17A70071DCF6 /* CellAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9F7725FF17A70071DCF6 /* CellAppearence.swift */; };
+		387B9F7C25FF17B10071DCF6 /* ToggledValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9F7B25FF17B10071DCF6 /* ToggledValue.swift */; };
+		387B9F8625FF1E7C0071DCF6 /* CalculatorCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9F8525FF1E7C0071DCF6 /* CalculatorCollectionView.swift */; };
+		387B9FDE25FF260C0071DCF6 /* AllClearClearCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9FDD25FF260C0071DCF6 /* AllClearClearCellTests.swift */; };
+		387B9FE625FF26270071DCF6 /* ContinueArithmeticBetweenCalculators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9FE525FF26270071DCF6 /* ContinueArithmeticBetweenCalculators.swift */; };
+		387B9FEB25FF26440071DCF6 /* CopyAndPasteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9FEA25FF26440071DCF6 /* CopyAndPasteTests.swift */; };
+		387B9FF025FF26680071DCF6 /* LayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9FEF25FF26680071DCF6 /* LayoutTests.swift */; };
+		387B9FF525FF267C0071DCF6 /* SwipeToDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9FF425FF267C0071DCF6 /* SwipeToDeleteTests.swift */; };
+		387B9FFA25FF26A20071DCF6 /* AddDisplayedNumberAsTermTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9FF925FF26A20071DCF6 /* AddDisplayedNumberAsTermTests.swift */; };
+		387B9FFF25FF26C70071DCF6 /* ContinuedSolvingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B9FFE25FF26C70071DCF6 /* ContinuedSolvingTests.swift */; };
+		387BA00425FF26FD0071DCF6 /* LogicAutocorrectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387BA00325FF26FD0071DCF6 /* LogicAutocorrectTests.swift */; };
+		387BA00925FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387BA00825FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift */; };
 		387C575E249AA0670058DAB8 /* ArithmeticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387C575D249AA0670058DAB8 /* ArithmeticController.swift */; };
 		3883169424AC5A5E001B644A /* RoundStandardCalculatorCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3883169324AC5A5E001B644A /* RoundStandardCalculatorCollectionViewCells.swift */; };
 		3883169624AC5A7B001B644A /* ManageStandardCalculatorCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3883169524AC5A7B001B644A /* ManageStandardCalculatorCollectionViewCells.swift */; };
 		3883169824AC5AA0001B644A /* SyncStandardCalculatorCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3883169724AC5AA0001B644A /* SyncStandardCalculatorCollectionViewCells.swift */; };
 		388B0F73247E2B2A00297941 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388B0F72247E2B2A00297941 /* Fonts.swift */; };
-		38A01B782489966900FB6FB6 /* DummyLabelUniversalConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A01B772489966900FB6FB6 /* DummyLabelUniversalConstraints.swift */; };
+		389A68FC25EA3E3000FB1791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389A68FB25EA3E3000FB1791 /* Main.storyboard */; };
 		38A57D1F24ABDCA600A7145A /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38A57D1924ABDCA600A7145A /* SF-Pro-Text-Regular.otf */; };
 		38A57D2024ABDCA600A7145A /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38A57D1A24ABDCA600A7145A /* SF-Pro-Display-Thin.otf */; };
 		38A57D2124ABDCA600A7145A /* SF-Pro-Text-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38A57D1B24ABDCA600A7145A /* SF-Pro-Text-Thin.otf */; };
@@ -73,33 +79,25 @@
 		38C7FF0A24ACF48A00B14288 /* OutputLabelMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C7FF0924ACF48A00B14288 /* OutputLabelMenuController.swift */; };
 		38DA23A6247CE6B70046239F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23A5247CE6B70046239F /* AppDelegate.swift */; };
 		38DA23A8247CE6B70046239F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23A7247CE6B70046239F /* SceneDelegate.swift */; };
-		38DA23AD247CE6B70046239F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DA23AB247CE6B70046239F /* Main.storyboard */; };
 		38DA23AF247CE6BB0046239F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DA23AE247CE6BB0046239F /* Assets.xcassets */; };
 		38DA23BA247CE7430046239F /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23B9247CE7430046239F /* CalculatorViewController.swift */; };
 		38DA23C0247CE8870046239F /* OutputLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23BF247CE8870046239F /* OutputLabel.swift */; };
 		38DA23C2247CE8AA0046239F /* SIUnitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23C1247CE8AA0046239F /* SIUnitLabel.swift */; };
-		38DA23C6247CE9880046239F /* DummyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23C5247CE9880046239F /* DummyLabel.swift */; };
-		38DA23CD247CEC830046239F /* ScientificCalculatorCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23CC247CEC830046239F /* ScientificCalculatorCollectionView.swift */; };
-		38DA23CF247CECA00046239F /* StandardCalculatorCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23CE247CECA00046239F /* StandardCalculatorCollectionView.swift */; };
 		38DA23D5247CEE0F0046239F /* CalculatorCollectionViewCellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23D4247CEE0F0046239F /* CalculatorCollectionViewCellLabel.swift */; };
 		38DA23D7247CEE550046239F /* CalculatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23D6247CEE550046239F /* CalculatorCollectionViewCell.swift */; };
-		38DA23DE247CEF440046239F /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23DD247CEF440046239F /* Constraints.swift */; };
-		38DA23E0247CEF610046239F /* DummyLabelConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23DF247CEF610046239F /* DummyLabelConstraints.swift */; };
-		38DA23E2247CEF9A0046239F /* OutputLabelConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23E1247CEF9A0046239F /* OutputLabelConstraints.swift */; };
-		38DA23E4247CEFAE0046239F /* SIUnitLabelConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23E3247CEFAE0046239F /* SIUnitLabelConstraints.swift */; };
-		38DA23E6247CEFD10046239F /* ScientificCalculatorCollectionViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23E5247CEFD10046239F /* ScientificCalculatorCollectionViewConstraints.swift */; };
-		38DA23E8247CEFFA0046239F /* StandardCalculatorCollectionViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23E7247CEFFA0046239F /* StandardCalculatorCollectionViewConstraints.swift */; };
-		38DA23F5247CFAD90046239F /* CalculatorConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23F4247CFAD90046239F /* CalculatorConstraints.swift */; };
-		38DA23F9247CFC390046239F /* OutputLabelUniversalConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23F8247CFC390046239F /* OutputLabelUniversalConstraints.swift */; };
-		38DA23FB247CFC6A0046239F /* OutputLabelLandscapeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23FA247CFC6A0046239F /* OutputLabelLandscapeConstraints.swift */; };
-		38DA23FD247CFCD20046239F /* OutputLabelPortraitConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA23FC247CFCD20046239F /* OutputLabelPortraitConstraints.swift */; };
-		38ECE1302488802E00928865 /* CalculatorCellContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ECE12F2488802E00928865 /* CalculatorCellContainer.swift */; };
 		38F1890924AC534800F7BDE4 /* ManageScientificCalculatorCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1890824AC534800F7BDE4 /* ManageScientificCalculatorCollectionViewCells.swift */; };
 		38F1890C24AC583D00F7BDE4 /* SyncScientificCalculatorCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1890B24AC583D00F7BDE4 /* SyncScientificCalculatorCollectionViewCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		38158F2D24E724D300A5385D /* PBXContainerItemProxy */ = {
+		387B9FB625FF25390071DCF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38DA239A247CE6B70046239F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38DA23A1247CE6B70046239F;
+			remoteInfo = iPhoneCalculatorRebuild;
+		};
+		387B9FCC25FF25810071DCF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38DA239A247CE6B70046239F /* Project object */;
 			proxyType = 1;
@@ -109,20 +107,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		380805E32489D00600FAF9BE /* SIUnitLabelUniversalConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIUnitLabelUniversalConstraints.swift; sourceTree = "<group>"; };
-		38097A6424948DD0009712EF /* LabelViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewConstraints.swift; sourceTree = "<group>"; };
-		38097A6624948E0F009712EF /* LabelViewLandscapeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewLandscapeConstraints.swift; sourceTree = "<group>"; };
-		38097A6824948E34009712EF /* LabelViewUniversalConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewUniversalConstraints.swift; sourceTree = "<group>"; };
 		38097A6E2494A7B6009712EF /* RadicalViewSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadicalViewSelected.swift; sourceTree = "<group>"; };
 		38097A702494A7E6009712EF /* RadicalViewDeselected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadicalViewDeselected.swift; sourceTree = "<group>"; };
 		38097A722494AF4C009712EF /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
-		38158F2824E724D300A5385D /* iPhoneCalculatorRebuildTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhoneCalculatorRebuildTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		382019FD247DC454004FDE24 /* SIUnitLabelConstraintsLandscapeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIUnitLabelConstraintsLandscapeConstraints.swift; sourceTree = "<group>"; };
-		382019FF247DC465004FDE24 /* SIUnitLabelConstraintsPortraitConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIUnitLabelConstraintsPortraitConstraints.swift; sourceTree = "<group>"; };
-		38201A01247DC486004FDE24 /* ScientificCalculatorCollectionViewLandscapeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificCalculatorCollectionViewLandscapeConstraints.swift; sourceTree = "<group>"; };
-		38201A07247DC4FC004FDE24 /* StandardCalculatorCollectionViewPortraitConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCalculatorCollectionViewPortraitConstraints.swift; sourceTree = "<group>"; };
-		38201A09247DC591004FDE24 /* ScientificCalculatorCollectionViewUniversalConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificCalculatorCollectionViewUniversalConstraints.swift; sourceTree = "<group>"; };
-		38201A11247DCC75004FDE24 /* StandardCalculatorCollectionViewUniversalConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCalculatorCollectionViewUniversalConstraints.swift; sourceTree = "<group>"; };
 		38201A3C247DE6BC004FDE24 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		38201A41247DEC15004FDE24 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
 		3824326124ACFC1000B6CAAB /* NumberValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberValue.swift; sourceTree = "<group>"; };
@@ -157,12 +144,32 @@
 		3870745F2499BBAC00C74D25 /* TrigonometricFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigonometricFunction.swift; sourceTree = "<group>"; };
 		3870746B2499E21D00C74D25 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		387B4B55247DEE5A003AC960 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = iPhoneCalculatorRebuild/Colors/Colors.swift; sourceTree = SOURCE_ROOT; };
+		387B9F4025FF11960071DCF6 /* AccessibilityObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityObjects.swift; sourceTree = "<group>"; };
+		387B9F4725FF11DD0071DCF6 /* CalculatorCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCollectionViewCellModel.swift; sourceTree = "<group>"; };
+		387B9F4E25FF12110071DCF6 /* CalculatorDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorDatasourceController.swift; sourceTree = "<group>"; };
+		387B9F7125FF17940071DCF6 /* AttributedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStrings.swift; sourceTree = "<group>"; };
+		387B9F7725FF17A70071DCF6 /* CellAppearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAppearence.swift; sourceTree = "<group>"; };
+		387B9F7B25FF17B10071DCF6 /* ToggledValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggledValue.swift; sourceTree = "<group>"; };
+		387B9F8525FF1E7C0071DCF6 /* CalculatorCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCollectionView.swift; sourceTree = "<group>"; };
+		387B9FB125FF25380071DCF6 /* iPhoneCalculatorRebuildUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhoneCalculatorRebuildUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		387B9FB525FF25390071DCF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		387B9FC725FF25810071DCF6 /* iPhoneCalculatorRebuildUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhoneCalculatorRebuildUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		387B9FCB25FF25810071DCF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		387B9FDD25FF260C0071DCF6 /* AllClearClearCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllClearClearCellTests.swift; sourceTree = "<group>"; };
+		387B9FE525FF26270071DCF6 /* ContinueArithmeticBetweenCalculators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueArithmeticBetweenCalculators.swift; sourceTree = "<group>"; };
+		387B9FEA25FF26440071DCF6 /* CopyAndPasteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteTests.swift; sourceTree = "<group>"; };
+		387B9FEF25FF26680071DCF6 /* LayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTests.swift; sourceTree = "<group>"; };
+		387B9FF425FF267C0071DCF6 /* SwipeToDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToDeleteTests.swift; sourceTree = "<group>"; };
+		387B9FF925FF26A20071DCF6 /* AddDisplayedNumberAsTermTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDisplayedNumberAsTermTests.swift; sourceTree = "<group>"; };
+		387B9FFE25FF26C70071DCF6 /* ContinuedSolvingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuedSolvingTests.swift; sourceTree = "<group>"; };
+		387BA00325FF26FD0071DCF6 /* LogicAutocorrectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicAutocorrectTests.swift; sourceTree = "<group>"; };
+		387BA00825FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentheticalAndPrecedenceTotalDisplaying.swift; sourceTree = "<group>"; };
 		387C575D249AA0670058DAB8 /* ArithmeticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticController.swift; sourceTree = "<group>"; };
 		3883169324AC5A5E001B644A /* RoundStandardCalculatorCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStandardCalculatorCollectionViewCells.swift; sourceTree = "<group>"; };
 		3883169524AC5A7B001B644A /* ManageStandardCalculatorCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStandardCalculatorCollectionViewCells.swift; sourceTree = "<group>"; };
 		3883169724AC5AA0001B644A /* SyncStandardCalculatorCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStandardCalculatorCollectionViewCells.swift; sourceTree = "<group>"; };
 		388B0F72247E2B2A00297941 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		38A01B772489966900FB6FB6 /* DummyLabelUniversalConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyLabelUniversalConstraints.swift; sourceTree = "<group>"; };
+		389A68FB25EA3E3000FB1791 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		38A57D1924ABDCA600A7145A /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Regular.otf"; path = "Fonts/SF-Pro-Text-Regular.otf"; sourceTree = SOURCE_ROOT; };
 		38A57D1A24ABDCA600A7145A /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Thin.otf"; path = "Fonts/SF-Pro-Display-Thin.otf"; sourceTree = SOURCE_ROOT; };
 		38A57D1B24ABDCA600A7145A /* SF-Pro-Text-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Thin.otf"; path = "Fonts/SF-Pro-Text-Thin.otf"; sourceTree = SOURCE_ROOT; };
@@ -177,34 +184,26 @@
 		38DA23A2247CE6B70046239F /* iPhoneCalculatorRebuild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneCalculatorRebuild.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DA23A5247CE6B70046239F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38DA23A7247CE6B70046239F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38DA23AC247CE6B70046239F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38DA23AE247CE6BB0046239F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38DA23B3247CE6BB0046239F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DA23B9247CE7430046239F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalculatorViewController.swift; path = "iPhoneCalculatorRebuild/View Controller/CalculatorViewController.swift"; sourceTree = SOURCE_ROOT; };
 		38DA23BF247CE8870046239F /* OutputLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputLabel.swift; sourceTree = "<group>"; };
 		38DA23C1247CE8AA0046239F /* SIUnitLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIUnitLabel.swift; sourceTree = "<group>"; };
-		38DA23C5247CE9880046239F /* DummyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyLabel.swift; sourceTree = "<group>"; };
-		38DA23CC247CEC830046239F /* ScientificCalculatorCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScientificCalculatorCollectionView.swift; path = iPhoneCalculatorRebuild/Views/CollectionViews/ScientificCalculatorCollectionView.swift; sourceTree = SOURCE_ROOT; };
-		38DA23CE247CECA00046239F /* StandardCalculatorCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StandardCalculatorCollectionView.swift; path = iPhoneCalculatorRebuild/Views/CollectionViews/StandardCalculatorCollectionView.swift; sourceTree = SOURCE_ROOT; };
 		38DA23D4247CEE0F0046239F /* CalculatorCollectionViewCellLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCollectionViewCellLabel.swift; sourceTree = "<group>"; };
 		38DA23D6247CEE550046239F /* CalculatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCollectionViewCell.swift; sourceTree = "<group>"; };
-		38DA23DD247CEF440046239F /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
-		38DA23DF247CEF610046239F /* DummyLabelConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyLabelConstraints.swift; sourceTree = "<group>"; };
-		38DA23E1247CEF9A0046239F /* OutputLabelConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputLabelConstraints.swift; sourceTree = "<group>"; };
-		38DA23E3247CEFAE0046239F /* SIUnitLabelConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIUnitLabelConstraints.swift; sourceTree = "<group>"; };
-		38DA23E5247CEFD10046239F /* ScientificCalculatorCollectionViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificCalculatorCollectionViewConstraints.swift; sourceTree = "<group>"; };
-		38DA23E7247CEFFA0046239F /* StandardCalculatorCollectionViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StandardCalculatorCollectionViewConstraints.swift; path = "iPhoneCalculatorRebuild/Layout/Constraints/Standard Calculator CollectionView/StandardCalculatorCollectionViewConstraints.swift"; sourceTree = SOURCE_ROOT; };
-		38DA23F4247CFAD90046239F /* CalculatorConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConstraints.swift; sourceTree = "<group>"; };
-		38DA23F8247CFC390046239F /* OutputLabelUniversalConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputLabelUniversalConstraints.swift; sourceTree = "<group>"; };
-		38DA23FA247CFC6A0046239F /* OutputLabelLandscapeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputLabelLandscapeConstraints.swift; sourceTree = "<group>"; };
-		38DA23FC247CFCD20046239F /* OutputLabelPortraitConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputLabelPortraitConstraints.swift; sourceTree = "<group>"; };
-		38ECE12F2488802E00928865 /* CalculatorCellContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalculatorCellContainer.swift; path = "iPhoneCalculatorRebuild/Calculator Cell/CalculatorCellContainer.swift"; sourceTree = SOURCE_ROOT; };
 		38F1890824AC534800F7BDE4 /* ManageScientificCalculatorCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageScientificCalculatorCollectionViewCells.swift; sourceTree = "<group>"; };
 		38F1890B24AC583D00F7BDE4 /* SyncScientificCalculatorCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncScientificCalculatorCollectionViewCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		38158F2524E724D300A5385D /* Frameworks */ = {
+		387B9FAE25FF25380071DCF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387B9FC425FF25810071DCF6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,16 +220,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38097A6A24948E4E009712EF /* LabelView */ = {
-			isa = PBXGroup;
-			children = (
-				38097A6424948DD0009712EF /* LabelViewConstraints.swift */,
-				38097A6624948E0F009712EF /* LabelViewLandscapeConstraints.swift */,
-				38097A6824948E34009712EF /* LabelViewUniversalConstraints.swift */,
-			);
-			path = LabelView;
-			sourceTree = "<group>";
-		};
 		38201A3B247DE69F004FDE24 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				38201A41247DEC15004FDE24 /* CalculatorCell.swift */,
-				38ECE12F2488802E00928865 /* CalculatorCellContainer.swift */,
 			);
 			path = "Calculator Cell";
 			sourceTree = "<group>";
@@ -321,6 +309,65 @@
 			path = iPhoneCalculatorRebuild/Colors;
 			sourceTree = SOURCE_ROOT;
 		};
+		387B9F3F25FF117F0071DCF6 /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				387B9F4025FF11960071DCF6 /* AccessibilityObjects.swift */,
+			);
+			path = Accessibility;
+			sourceTree = "<group>";
+		};
+		387B9F4625FF11B20071DCF6 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				387B9F4725FF11DD0071DCF6 /* CalculatorCollectionViewCellModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		387B9F4D25FF12030071DCF6 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				387B9F4E25FF12110071DCF6 /* CalculatorDatasourceController.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		387B9F7025FF177F0071DCF6 /* CalculatorCells */ = {
+			isa = PBXGroup;
+			children = (
+				387B9F7125FF17940071DCF6 /* AttributedStrings.swift */,
+				387B9F7725FF17A70071DCF6 /* CellAppearence.swift */,
+				387B9F7B25FF17B10071DCF6 /* ToggledValue.swift */,
+			);
+			path = CalculatorCells;
+			sourceTree = "<group>";
+		};
+		387B9FB225FF25380071DCF6 /* iPhoneCalculatorRebuildUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				387B9FF925FF26A20071DCF6 /* AddDisplayedNumberAsTermTests.swift */,
+				387B9FFE25FF26C70071DCF6 /* ContinuedSolvingTests.swift */,
+				387BA00325FF26FD0071DCF6 /* LogicAutocorrectTests.swift */,
+				387BA00825FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift */,
+				387B9FB525FF25390071DCF6 /* Info.plist */,
+			);
+			path = iPhoneCalculatorRebuildUnitTests;
+			sourceTree = "<group>";
+		};
+		387B9FC825FF25810071DCF6 /* iPhoneCalculatorRebuildUITests */ = {
+			isa = PBXGroup;
+			children = (
+				387B9FDD25FF260C0071DCF6 /* AllClearClearCellTests.swift */,
+				387B9FE525FF26270071DCF6 /* ContinueArithmeticBetweenCalculators.swift */,
+				387B9FEA25FF26440071DCF6 /* CopyAndPasteTests.swift */,
+				387B9FEF25FF26680071DCF6 /* LayoutTests.swift */,
+				387B9FF425FF267C0071DCF6 /* SwipeToDeleteTests.swift */,
+				387B9FCB25FF25810071DCF6 /* Info.plist */,
+			);
+			path = iPhoneCalculatorRebuildUITests;
+			sourceTree = "<group>";
+		};
 		3883169224AC5A34001B644A /* StandardCalculatorCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +392,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		389A68FA25EA3E1700FB1791 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				389A68FB25EA3E3000FB1791 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		38A01B76248995A900FB6FB6 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +421,8 @@
 			isa = PBXGroup;
 			children = (
 				38DA23A4247CE6B70046239F /* iPhoneCalculatorRebuild */,
+				387B9FC825FF25810071DCF6 /* iPhoneCalculatorRebuildUITests */,
+				387B9FB225FF25380071DCF6 /* iPhoneCalculatorRebuildUnitTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -373,7 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				38DA23A2247CE6B70046239F /* iPhoneCalculatorRebuild.app */,
-				38158F2824E724D300A5385D /* iPhoneCalculatorRebuildTests.xctest */,
+				387B9FB125FF25380071DCF6 /* iPhoneCalculatorRebuildUnitTests.xctest */,
+				387B9FC725FF25810071DCF6 /* iPhoneCalculatorRebuildUITests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -382,17 +440,19 @@
 		38DA23A4247CE6B70046239F /* iPhoneCalculatorRebuild */ = {
 			isa = PBXGroup;
 			children = (
-				387B4B57247DEEBB003AC960 /* Colors */,
+				387B9F3F25FF117F0071DCF6 /* Accessibility */,
+				387B9F4D25FF12030071DCF6 /* Datasource */,
 				38201A3B247DE69F004FDE24 /* Calculator */,
 				38201A40247DEBD9004FDE24 /* Calculator Cell */,
+				387B4B57247DEEBB003AC960 /* Colors */,
 				388B0F74247E2B2E00297941 /* Fonts */,
-				38DA23D8247CEEC30046239F /* Layout */,
 				38DA23A3247CE6B70046239F /* Products */,
 				38DA23CA247CEBC00046239F /* Protocols */,
 				38DA23BC247CE7820046239F /* Resources */,
 				38DA23C8247CEA600046239F /* Solving */,
-				38DA23BD247CE78F0046239F /* Storyboard */,
+				389A68FA25EA3E1700FB1791 /* Storyboard */,
 				38DA23BE247CE81A0046239F /* Views */,
+				387B9F4625FF11B20071DCF6 /* View Model */,
 				38A01B76248995A900FB6FB6 /* View Controller */,
 				38DA23B3247CE6BB0046239F /* Info.plist */,
 			);
@@ -407,14 +467,6 @@
 				38DA23AE247CE6BB0046239F /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		38DA23BD247CE78F0046239F /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				38DA23AB247CE6B70046239F /* Main.storyboard */,
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		38DA23BE247CE81A0046239F /* Views */ = {
@@ -445,6 +497,7 @@
 			children = (
 				3824327324AD317E00B6CAAB /* ArithmeticController */,
 				3824326B24AD0B5D00B6CAAB /* CalculatorBrain */,
+				387B9F7025FF177F0071DCF6 /* CalculatorCells */,
 				38F1890F24AC590700F7BDE4 /* CalculatorCollectionViews */,
 				3824326C24AD2D9E00B6CAAB /* PrecedenceOperationController */,
 				3824326024ACFBFE00B6CAAB /* Term */,
@@ -456,8 +509,7 @@
 		38DA23CB247CEC3F0046239F /* CollectionViews */ = {
 			isa = PBXGroup;
 			children = (
-				38DA23CC247CEC830046239F /* ScientificCalculatorCollectionView.swift */,
-				38DA23CE247CECA00046239F /* StandardCalculatorCollectionView.swift */,
+				387B9F8525FF1E7C0071DCF6 /* CalculatorCollectionView.swift */,
 			);
 			name = CollectionViews;
 			path = iPhoneCalculatorRebuild/Views/CollectionViews;
@@ -478,87 +530,11 @@
 			isa = PBXGroup;
 			children = (
 				38097A722494AF4C009712EF /* LabelView.swift */,
-				38DA23C5247CE9880046239F /* DummyLabel.swift */,
 				3869F9C524ACF71F007CC321 /* MenuController.swift */,
 				38DA23BF247CE8870046239F /* OutputLabel.swift */,
 				38DA23C1247CE8AA0046239F /* SIUnitLabel.swift */,
 			);
 			path = LabelView;
-			sourceTree = "<group>";
-		};
-		38DA23D8247CEEC30046239F /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				38DA23DA247CEEF30046239F /* Constraints */,
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
-		38DA23DA247CEEF30046239F /* Constraints */ = {
-			isa = PBXGroup;
-			children = (
-				38DA23F4247CFAD90046239F /* CalculatorConstraints.swift */,
-				38DA23DD247CEF440046239F /* Constraints.swift */,
-				38DA23EF247CFA700046239F /* DummyLabel */,
-				38097A6A24948E4E009712EF /* LabelView */,
-				38DA23ED247CF9700046239F /* OutputLabel */,
-				38DA2400247CFDD20046239F /* Scientific Calculator CollectionView */,
-				38DA2401247CFDE60046239F /* SIUnit Label */,
-				38DA23FF247CFD720046239F /* Standard Calculator CollectionView */,
-			);
-			path = Constraints;
-			sourceTree = "<group>";
-		};
-		38DA23ED247CF9700046239F /* OutputLabel */ = {
-			isa = PBXGroup;
-			children = (
-				38DA23E1247CEF9A0046239F /* OutputLabelConstraints.swift */,
-				38DA23FA247CFC6A0046239F /* OutputLabelLandscapeConstraints.swift */,
-				38DA23FC247CFCD20046239F /* OutputLabelPortraitConstraints.swift */,
-				38DA23F8247CFC390046239F /* OutputLabelUniversalConstraints.swift */,
-			);
-			path = OutputLabel;
-			sourceTree = "<group>";
-		};
-		38DA23EF247CFA700046239F /* DummyLabel */ = {
-			isa = PBXGroup;
-			children = (
-				38DA23DF247CEF610046239F /* DummyLabelConstraints.swift */,
-				38A01B772489966900FB6FB6 /* DummyLabelUniversalConstraints.swift */,
-			);
-			path = DummyLabel;
-			sourceTree = "<group>";
-		};
-		38DA23FF247CFD720046239F /* Standard Calculator CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				38DA23E7247CEFFA0046239F /* StandardCalculatorCollectionViewConstraints.swift */,
-				38201A07247DC4FC004FDE24 /* StandardCalculatorCollectionViewPortraitConstraints.swift */,
-				38201A11247DCC75004FDE24 /* StandardCalculatorCollectionViewUniversalConstraints.swift */,
-			);
-			name = "Standard Calculator CollectionView";
-			path = "iPhoneCalculatorRebuild/Layout/Constraints/Standard Calculator CollectionView";
-			sourceTree = SOURCE_ROOT;
-		};
-		38DA2400247CFDD20046239F /* Scientific Calculator CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				38DA23E5247CEFD10046239F /* ScientificCalculatorCollectionViewConstraints.swift */,
-				38201A01247DC486004FDE24 /* ScientificCalculatorCollectionViewLandscapeConstraints.swift */,
-				38201A09247DC591004FDE24 /* ScientificCalculatorCollectionViewUniversalConstraints.swift */,
-			);
-			path = "Scientific Calculator CollectionView";
-			sourceTree = "<group>";
-		};
-		38DA2401247CFDE60046239F /* SIUnit Label */ = {
-			isa = PBXGroup;
-			children = (
-				38DA23E3247CEFAE0046239F /* SIUnitLabelConstraints.swift */,
-				382019FD247DC454004FDE24 /* SIUnitLabelConstraintsLandscapeConstraints.swift */,
-				382019FF247DC465004FDE24 /* SIUnitLabelConstraintsPortraitConstraints.swift */,
-				380805E32489D00600FAF9BE /* SIUnitLabelUniversalConstraints.swift */,
-			);
-			path = "SIUnit Label";
 			sourceTree = "<group>";
 		};
 		38F1890A24AC580900F7BDE4 /* ScientificCalculatorCollectionView */ = {
@@ -583,23 +559,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38158F2724E724D300A5385D /* iPhoneCalculatorRebuildTests */ = {
+		387B9FB025FF25380071DCF6 /* iPhoneCalculatorRebuildUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38158F3124E724D300A5385D /* Build configuration list for PBXNativeTarget "iPhoneCalculatorRebuildTests" */;
+			buildConfigurationList = 387B9FB825FF25390071DCF6 /* Build configuration list for PBXNativeTarget "iPhoneCalculatorRebuildUnitTests" */;
 			buildPhases = (
-				38158F2424E724D300A5385D /* Sources */,
-				38158F2524E724D300A5385D /* Frameworks */,
-				38158F2624E724D300A5385D /* Resources */,
+				387B9FAD25FF25380071DCF6 /* Sources */,
+				387B9FAE25FF25380071DCF6 /* Frameworks */,
+				387B9FAF25FF25380071DCF6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				38158F2E24E724D300A5385D /* PBXTargetDependency */,
+				387B9FB725FF25390071DCF6 /* PBXTargetDependency */,
 			);
-			name = iPhoneCalculatorRebuildTests;
-			productName = iPhoneCalculatorRebuildTests;
-			productReference = 38158F2824E724D300A5385D /* iPhoneCalculatorRebuildTests.xctest */;
+			name = iPhoneCalculatorRebuildUnitTests;
+			productName = iPhoneCalculatorRebuildUnitTests;
+			productReference = 387B9FB125FF25380071DCF6 /* iPhoneCalculatorRebuildUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		387B9FC625FF25810071DCF6 /* iPhoneCalculatorRebuildUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 387B9FCE25FF25810071DCF6 /* Build configuration list for PBXNativeTarget "iPhoneCalculatorRebuildUITests" */;
+			buildPhases = (
+				387B9FC325FF25810071DCF6 /* Sources */,
+				387B9FC425FF25810071DCF6 /* Frameworks */,
+				387B9FC525FF25810071DCF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				387B9FCD25FF25810071DCF6 /* PBXTargetDependency */,
+			);
+			name = iPhoneCalculatorRebuildUITests;
+			productName = iPhoneCalculatorRebuildUITests;
+			productReference = 387B9FC725FF25810071DCF6 /* iPhoneCalculatorRebuildUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		38DA23A1247CE6B70046239F /* iPhoneCalculatorRebuild */ = {
 			isa = PBXNativeTarget;
@@ -624,12 +618,16 @@
 		38DA239A247CE6B70046239F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Alfredo Colon";
 				TargetAttributes = {
-					38158F2724E724D300A5385D = {
-						CreatedOnToolsVersion = 11.6;
+					387B9FB025FF25380071DCF6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 38DA23A1247CE6B70046239F;
+					};
+					387B9FC625FF25810071DCF6 = {
+						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 38DA23A1247CE6B70046239F;
 					};
 					38DA23A1247CE6B70046239F = {
@@ -651,13 +649,21 @@
 			projectRoot = "";
 			targets = (
 				38DA23A1247CE6B70046239F /* iPhoneCalculatorRebuild */,
-				38158F2724E724D300A5385D /* iPhoneCalculatorRebuildTests */,
+				387B9FB025FF25380071DCF6 /* iPhoneCalculatorRebuildUnitTests */,
+				387B9FC625FF25810071DCF6 /* iPhoneCalculatorRebuildUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		38158F2624E724D300A5385D /* Resources */ = {
+		387B9FAF25FF25380071DCF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387B9FC525FF25810071DCF6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -671,21 +677,37 @@
 				38A57D2024ABDCA600A7145A /* SF-Pro-Display-Thin.otf in Resources */,
 				38A57D2124ABDCA600A7145A /* SF-Pro-Text-Thin.otf in Resources */,
 				38A57D2424ABDCA600A7145A /* SF-Pro-Text-Light.otf in Resources */,
+				389A68FC25EA3E3000FB1791 /* Main.storyboard in Resources */,
 				38A57D1F24ABDCA600A7145A /* SF-Pro-Text-Regular.otf in Resources */,
 				38DA23AF247CE6BB0046239F /* Assets.xcassets in Resources */,
 				38A57D2224ABDCA600A7145A /* SF-Pro-Display-Light.otf in Resources */,
 				38A57D2324ABDCA600A7145A /* SF-Pro-Display-Regular.otf in Resources */,
-				38DA23AD247CE6B70046239F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		38158F2424E724D300A5385D /* Sources */ = {
+		387B9FAD25FF25380071DCF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387B9FFF25FF26C70071DCF6 /* ContinuedSolvingTests.swift in Sources */,
+				387BA00925FF271D0071DCF6 /* ParentheticalAndPrecedenceTotalDisplaying.swift in Sources */,
+				387B9FFA25FF26A20071DCF6 /* AddDisplayedNumberAsTermTests.swift in Sources */,
+				387BA00425FF26FD0071DCF6 /* LogicAutocorrectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387B9FC325FF25810071DCF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387B9FF525FF267C0071DCF6 /* SwipeToDeleteTests.swift in Sources */,
+				387B9FEB25FF26440071DCF6 /* CopyAndPasteTests.swift in Sources */,
+				387B9FE625FF26270071DCF6 /* ContinueArithmeticBetweenCalculators.swift in Sources */,
+				387B9FF025FF26680071DCF6 /* LayoutTests.swift in Sources */,
+				387B9FDE25FF260C0071DCF6 /* AllClearClearCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,45 +716,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				3824326824AD05ED00B6CAAB /* EvaluateFunction.swift in Sources */,
+				387B9F7825FF17A70071DCF6 /* CellAppearence.swift in Sources */,
 				38DA23A6247CE6B70046239F /* AppDelegate.swift in Sources */,
 				387074502499B74800C74D25 /* Constant.swift in Sources */,
 				387074602499BBAC00C74D25 /* TrigonometricFunction.swift in Sources */,
 				38DA23D5247CEE0F0046239F /* CalculatorCollectionViewCellLabel.swift in Sources */,
 				3883169424AC5A5E001B644A /* RoundStandardCalculatorCollectionViewCells.swift in Sources */,
 				3824327524AD319400B6CAAB /* AddCalculatorEntry.swift in Sources */,
-				38DA23C6247CE9880046239F /* DummyLabel.swift in Sources */,
 				3870746C2499E21D00C74D25 /* Operation.swift in Sources */,
 				3870745C2499BB7100C74D25 /* MutableOperand.swift in Sources */,
-				38DA23CF247CECA00046239F /* StandardCalculatorCollectionView.swift in Sources */,
 				3824327724AD5E6800B6CAAB /* AddParentheticalExpression.swift in Sources */,
 				38F1890924AC534800F7BDE4 /* ManageScientificCalculatorCollectionViewCells.swift in Sources */,
-				38097A6924948E34009712EF /* LabelViewUniversalConstraints.swift in Sources */,
 				38418430249EE02300CDDE0A /* PrecedenceOperationController.swift in Sources */,
 				38C7FF0424AC5D9D00B14288 /* RoundScientificCalculatorCollectionViewCells.swift in Sources */,
 				3870744E2499B70500C74D25 /* Term.swift in Sources */,
 				38295460249381F9002897E3 /* CalculatorBrain.swift in Sources */,
-				38DA23E4247CEFAE0046239F /* SIUnitLabelConstraints.swift in Sources */,
-				38DA23F9247CFC390046239F /* OutputLabelUniversalConstraints.swift in Sources */,
 				3883169824AC5AA0001B644A /* SyncStandardCalculatorCollectionViewCells.swift in Sources */,
-				38DA23DE247CEF440046239F /* Constraints.swift in Sources */,
 				3824328324AD5F3A00B6CAAB /* ToggleNumberSign.swift in Sources */,
 				387074542499BAF200C74D25 /* FixedOperand.swift in Sources */,
-				38201A12247DCC75004FDE24 /* StandardCalculatorCollectionViewUniversalConstraints.swift in Sources */,
-				38201A0A247DC591004FDE24 /* ScientificCalculatorCollectionViewUniversalConstraints.swift in Sources */,
 				38097A712494A7E6009712EF /* RadicalViewDeselected.swift in Sources */,
 				3824327B24AD5EC900B6CAAB /* ClearLastTerm.swift in Sources */,
 				38DA23C0247CE8870046239F /* OutputLabel.swift in Sources */,
-				382019FE247DC454004FDE24 /* SIUnitLabelConstraintsLandscapeConstraints.swift in Sources */,
 				3870745A2499BB6600C74D25 /* MemoryRecall.swift in Sources */,
-				38097A6724948E0F009712EF /* LabelViewLandscapeConstraints.swift in Sources */,
 				38DA23BA247CE7430046239F /* CalculatorViewController.swift in Sources */,
 				3824327224AD2E6D00B6CAAB /* EvaluateNewOperator.swift in Sources */,
-				38DA23E6247CEFD10046239F /* ScientificCalculatorCollectionViewConstraints.swift in Sources */,
-				38DA23FB247CFC6A0046239F /* OutputLabelLandscapeConstraints.swift in Sources */,
 				38DA23A8247CE6B70046239F /* SceneDelegate.swift in Sources */,
-				38201A02247DC486004FDE24 /* ScientificCalculatorCollectionViewLandscapeConstraints.swift in Sources */,
-				38DA23CD247CEC830046239F /* ScientificCalculatorCollectionView.swift in Sources */,
-				38DA23E2247CEF9A0046239F /* OutputLabelConstraints.swift in Sources */,
+				387B9F4125FF11960071DCF6 /* AccessibilityObjects.swift in Sources */,
 				3824326224ACFC1000B6CAAB /* NumberValue.swift in Sources */,
 				387074562499BB1D00C74D25 /* FunctionWithOneInput.swift in Sources */,
 				3824327F24AD5F0B00B6CAAB /* EvaluateArithmeticExpression.swift in Sources */,
@@ -742,37 +751,32 @@
 				38B7855124801B8A00DCFF2D /* StandardCalculator.swift in Sources */,
 				3848811B24A1DC3300EDCDF6 /* PrecedenceOperation.swift in Sources */,
 				38B7854F24801B7600DCFF2D /* ScientificCalculator.swift in Sources */,
-				380805E42489D00600FAF9BE /* SIUnitLabelUniversalConstraints.swift in Sources */,
 				38F1890C24AC583D00F7BDE4 /* SyncScientificCalculatorCollectionViewCells.swift in Sources */,
 				38271EA524A3329500D8F1DE /* Solver.swift in Sources */,
 				38201A3D247DE6BD004FDE24 /* Calculator.swift in Sources */,
-				38097A6524948DD0009712EF /* LabelViewConstraints.swift in Sources */,
-				38DA23E8247CEFFA0046239F /* StandardCalculatorCollectionViewConstraints.swift in Sources */,
 				3870745E2499BB8B00C74D25 /* PercentageFunction.swift in Sources */,
 				3824326E24AD2DBD00B6CAAB /* RemovePrecedenceOperation.swift in Sources */,
+				387B9F8625FF1E7C0071DCF6 /* CalculatorCollectionView.swift in Sources */,
 				3824327D24AD5EF200B6CAAB /* CloseParentheticalExpression.swift in Sources */,
-				38201A08247DC4FC004FDE24 /* StandardCalculatorCollectionViewPortraitConstraints.swift in Sources */,
-				38201A00247DC465004FDE24 /* SIUnitLabelConstraintsPortraitConstraints.swift in Sources */,
 				3869F9C624ACF71F007CC321 /* MenuController.swift in Sources */,
 				387B4B56247DEE5A003AC960 /* Colors.swift in Sources */,
 				38201A42247DEC15004FDE24 /* CalculatorCell.swift in Sources */,
 				38097A732494AF4C009712EF /* LabelView.swift in Sources */,
-				38A01B782489966900FB6FB6 /* DummyLabelUniversalConstraints.swift in Sources */,
 				38DA23D7247CEE550046239F /* CalculatorCollectionViewCell.swift in Sources */,
+				387B9F4825FF11DD0071DCF6 /* CalculatorCollectionViewCellModel.swift in Sources */,
+				387B9F7225FF17940071DCF6 /* AttributedStrings.swift in Sources */,
 				3824326424ACFC3900B6CAAB /* DoubleValue.swift in Sources */,
 				3824326A24AD069500B6CAAB /* PersistStartingValues.swift in Sources */,
-				38DA23E0247CEF610046239F /* DummyLabelConstraints.swift in Sources */,
 				38DA23C2247CE8AA0046239F /* SIUnitLabel.swift in Sources */,
-				38DA23F5247CFAD90046239F /* CalculatorConstraints.swift in Sources */,
+				387B9F4F25FF12110071DCF6 /* CalculatorDatasourceController.swift in Sources */,
 				387074582499BB3E00C74D25 /* FunctionWithTwoInputs.swift in Sources */,
-				38DA23FD247CFCD20046239F /* OutputLabelPortraitConstraints.swift in Sources */,
 				3824328124AD5F2300B6CAAB /* SecondSetOfFunctionsToggled.swift in Sources */,
-				38ECE1302488802E00928865 /* CalculatorCellContainer.swift in Sources */,
 				3824327924AD5E8600B6CAAB /* ClearAllEntries.swift in Sources */,
 				38C7FF0624AC7ECA00B14288 /* EditOutputLabelText.swift in Sources */,
 				3824327024AD2DFD00B6CAAB /* ReplacePrecedenceOperation.swift in Sources */,
 				3883169624AC5A7B001B644A /* ManageStandardCalculatorCollectionViewCells.swift in Sources */,
 				388B0F73247E2B2A00297941 /* Fonts.swift in Sources */,
+				387B9F7C25FF17B10071DCF6 /* ToggledValue.swift in Sources */,
 				3824326624AD05CE00B6CAAB /* SignCanToggle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,40 +784,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		38158F2E24E724D300A5385D /* PBXTargetDependency */ = {
+		387B9FB725FF25390071DCF6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 38DA23A1247CE6B70046239F /* iPhoneCalculatorRebuild */;
-			targetProxy = 38158F2D24E724D300A5385D /* PBXContainerItemProxy */;
+			targetProxy = 387B9FB625FF25390071DCF6 /* PBXContainerItemProxy */;
+		};
+		387B9FCD25FF25810071DCF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38DA23A1247CE6B70046239F /* iPhoneCalculatorRebuild */;
+			targetProxy = 387B9FCC25FF25810071DCF6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		38DA23AB247CE6B70046239F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38DA23AC247CE6B70046239F /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		38158F2F24E724D300A5385D /* Debug */ = {
+		387B9FB925FF25390071DCF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 955MLY2U7C;
-				INFOPLIST_FILE = iPhoneCalculatorRebuild/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				INFOPLIST_FILE = iPhoneCalculatorRebuildUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = alfredoDevelops.iPhoneCalculatorRebuildTests;
+				PRODUCT_BUNDLE_IDENTIFIER = alfredoDevelops.iPhoneCalculatorRebuildUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -821,24 +819,67 @@
 			};
 			name = Debug;
 		};
-		38158F3024E724D300A5385D /* Release */ = {
+		387B9FBA25FF25390071DCF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 955MLY2U7C;
-				INFOPLIST_FILE = iPhoneCalculatorRebuild/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				INFOPLIST_FILE = iPhoneCalculatorRebuildUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = alfredoDevelops.iPhoneCalculatorRebuildTests;
+				PRODUCT_BUNDLE_IDENTIFIER = alfredoDevelops.iPhoneCalculatorRebuildUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPhoneCalculatorRebuild.app/iPhoneCalculatorRebuild";
+			};
+			name = Release;
+		};
+		387B9FCF25FF25810071DCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 955MLY2U7C;
+				INFOPLIST_FILE = iPhoneCalculatorRebuildUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alfredoDevelops.iPhoneCalculatorRebuildUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iPhoneCalculatorRebuild;
+			};
+			name = Debug;
+		};
+		387B9FD025FF25810071DCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 955MLY2U7C;
+				INFOPLIST_FILE = iPhoneCalculatorRebuildUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alfredoDevelops.iPhoneCalculatorRebuildUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iPhoneCalculatorRebuild;
 			};
 			name = Release;
 		};
@@ -995,11 +1036,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38158F3124E724D300A5385D /* Build configuration list for PBXNativeTarget "iPhoneCalculatorRebuildTests" */ = {
+		387B9FB825FF25390071DCF6 /* Build configuration list for PBXNativeTarget "iPhoneCalculatorRebuildUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38158F2F24E724D300A5385D /* Debug */,
-				38158F3024E724D300A5385D /* Release */,
+				387B9FB925FF25390071DCF6 /* Debug */,
+				387B9FBA25FF25390071DCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		387B9FCE25FF25810071DCF6 /* Build configuration list for PBXNativeTarget "iPhoneCalculatorRebuildUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				387B9FCF25FF25810071DCF6 /* Debug */,
+				387B9FD025FF25810071DCF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

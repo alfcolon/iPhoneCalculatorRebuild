@@ -35,4 +35,8 @@ class SIUnitLabel: UILabel {
     override func layoutMarginsDidChange() {
         self.isHidden = self.superview!.frame.width > self.superview!.frame.height ? false : true
     }
+	
+	func updateText(string: String) {
+		self.text = string == "Deg" ? "Rad" : ""
+	}
 }

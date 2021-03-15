@@ -44,10 +44,10 @@ class MutableOperand: SignCanToggle, DoubleValue {
         let digitCount: Int = self.fractionArray.count + self.integerArray.count
         
         switch Calculators.active {
-        case .Scientific:
-            guard digitCount < ScientificCalculator.numberFormatter.decimalDigitMaximum else { return }
-        case .Standard:
-            guard digitCount < StandardCalculator.numberFormatter.decimalDigitMaximum else { return }
+        case .scientific:
+			guard digitCount < Calculators.scientific.numberFormatter.decimalDigitMaximum else { return }
+        case .standard:
+			guard digitCount < Calculators.standard.numberFormatter.decimalDigitMaximum else { return }
         }
         
         //2. Then check if the digit needs to be added to as a fraction

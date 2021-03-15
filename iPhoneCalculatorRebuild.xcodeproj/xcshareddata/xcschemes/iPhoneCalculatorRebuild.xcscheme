@@ -38,6 +38,26 @@
                ReferencedContainer = "container:iPhoneCalculatorRebuild.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "387B9F8E25FF24740071DCF6"
+               BuildableName = "iPhoneCalculatorRebuildUITests.xctest"
+               BlueprintName = "iPhoneCalculatorRebuildUITests"
+               ReferencedContainer = "container:iPhoneCalculatorRebuild.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "387B9FB025FF25380071DCF6"
+               BuildableName = "iPhoneCalculatorRebuildUnitTests.xctest"
+               BlueprintName = "iPhoneCalculatorRebuildUnitTests"
+               ReferencedContainer = "container:iPhoneCalculatorRebuild.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -9,154 +9,115 @@
 import UIKit
 
 class CalculatorCollectionViewCell: UICollectionViewCell {
-    
-    //MARK: - Properties
+	
+	//MARK: - Properties
+	
+	var viewModel: CalculatorCollectionViewCellModel!
+	var label: CalculatorCollectionViewCellLabel!
+	
+	//MARK: - isHiglighted
+	
+	override var isHighlighted: Bool {
+		didSet {
+			self.isHighlighted == true ?
+				highlightCell(to: self.viewModel.calculatorCell.highlightColor, duration: 0.5, options: .curveEaseIn, view: self)
+			:
+			highlightCell(to: self.viewModel.calculatorCell.backgroundColor, duration: 0.5, options: .curveEaseOut, view: self)
+		}
+	}
+	
+	private func highlightCell(to color: UIColor, duration: TimeInterval, options: UIView.AnimationOptions, view: UIView) {
+		UIView.animate(
+			withDuration: duration,
+			delay: 0,
+			options: options,
+			animations: { view.backgroundColor = color }
+		)
+	}
+	
+	func updateAppearenceForSelectedCell() {
+		self.backgroundColor = self.viewModel.calculatorCell.selectedBackgroundColor
+		self.label.textColor = self.viewModel.calculatorCell.selectedTextColor
+		AccessibilityObjects.shared.update(viewCell: self)
+		
+	}
+	
+	func updateAppearenceForDeselectedCell() {
+		self.backgroundColor = self.viewModel.calculatorCell.backgroundColor
+		self.label.textColor = self.viewModel.calculatorCell.textColor
+		AccessibilityObjects.shared.update(viewCell: self)
+	}
+	
+	//MARK: - Init
+	
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+		self.setupSubviews()
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
+	//MARK: - Init Helper Method
 
-    var appearsToBeSelected: Bool = false {
-        didSet {
-            switch self.calculatorCell {
-            case .exponentFunction(let function):
-                switch function {
-                case .BaseXPowerY, .BaseYPowerX, .EnterExponent:
-                    self.appearsToBeSelected ? self.updateAppearenceForSelectedCell() : self.updateAppearenceForDeselectedCell()
-                default:
-                    break
-                }
-            case .logFunction(let function):
-                switch function {
-                case .LogBaseY:
-                    self.appearsToBeSelected ? self.updateAppearenceForSelectedCell() : self.updateAppearenceForDeselectedCell()
-                default:
-                    break
-                }
-            case .operator_:
-                if self.appearsToBeSelected {
-                    self.updateAppearenceForSelectedCell()
-                }
-                else {
-                    self.updateAppearenceForDeselectedCell()
-                }
-                
-            case .rootFunction(let function):
-                switch function {
-                case .CoefficientYRadicandX:
-                    if self.appearsToBeSelected {
-                        self.label.textColor = .black
-                        let radicalView: RadicalViewSelected = RadicalViewSelected(frame: self.frame)
-                        let selectedBackgroundColor: UIColor! = self.calculatorCell.selectedBackgroundColor
+	func setupSubviews() {
+		self.label = CalculatorCollectionViewCellLabel(frame: self.frame)
 
-                        radicalView.backgroundColor = selectedBackgroundColor
-                        self.backgroundView = radicalView
-                        self.backgroundView?.isHidden = false
-                    }
-                    else {
-                        self.label.textColor = .white
-                        let radicalView: RadicalViewDeselected = RadicalViewDeselected(frame: self.frame)
-                        self.backgroundView = radicalView
-                    }
-                default:
-                    break
-                }
-            case .toggleSecondSetOfFunctions:
-                self.appearsToBeSelected ? self.updateAppearenceForSelectedCell() : self.updateAppearenceForDeselectedCell()
-            default:
-                break
-            }
-        }
-    }
-    var calculatorCell: CalculatorCell! { didSet { self.updateProperties() }}
-    var label: CalculatorCollectionViewCellLabel!
-    
-    //MARK: - isHiglighted
-    
-    override var isHighlighted: Bool {
-        didSet {
-            self.isHighlighted == true ?
-            highlightCell(to: self.calculatorCell.highlightColor, duration: 0.5, options: .curveEaseIn, view: self)
-            :
-            highlightCell(to: self.calculatorCell.backgroundColor, duration: 0.5, options: .curveEaseOut, view: self)
-        }
-    }
-    
-    private func highlightCell(to color: UIColor, duration: TimeInterval, options: UIView.AnimationOptions, view: UIView) {
-        UIView.animate(
-            withDuration: duration,
-            delay: 0,
-            options: options,
-            animations: { view.backgroundColor = color },
-            completion: nil
-        )
-    }
-    
-    //MARK: - isSelected
-    
-    override var isSelected: Bool {
-        didSet {
-            guard self.calculatorCell.appearenceChangesWhenSelected == true else { return }
-            
-            switch self.calculatorCell {
-            case .exponentFunction, .logFunction, .operator_, .rootFunction, .toggleSecondSetOfFunctions:
-                return
-            default:
-                self.isSelected ? self.updateAppearenceForSelectedCell() : self.updateAppearenceForDeselectedCell()
-            }
-        }
-    }
-    
-    func updateAppearenceForSelectedCell() {
-//        guard self.calculatorCell.appearenceChangesWhenSelected else { return }
-        self.backgroundColor = self.calculatorCell.selectedBackgroundColor
-        self.label.textColor = self.calculatorCell.selectedTextColor
-    }
-    
-    func updateAppearenceForDeselectedCell() {
-//        guard self.calculatorCell.appearenceChangesWhenSelected else { return }
-        self.backgroundColor = self.calculatorCell.backgroundColor
-        self.label.textColor = self.calculatorCell.textColor
-    }
-    
-    //MARK: - Init
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.setupSubviews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    //MARK: - Init Helper Method
-    
-    private func setupSubviews() {
-        self.label = CalculatorCollectionViewCellLabel(frame: self.frame)
+		self.contentView.addSubview(label)
 
-        self.contentView.addSubview(label)
+		self.label.activateConstraints()
+	}
 
-        self.label.activateConstraints()
-    }
+	//MARK: - Update Properties
 
-    //MARK: - Update Properties
+	func updateProperties() {
+		self.backgroundView = nil
+		self.label.attributedText = self.viewModel.calculatorCell.attributedString
+		AccessibilityObjects.shared.setup(viewCell: self)
+		
+		if self.viewModel.cellIsSelected {
+			self.addSelectedRadicalViewIfNeeded()
+			self.updateAppearenceForSelectedCell()
+		}
+		else {
+			self.addDeselectedRadicalViewIfNeeded()
+			self.updateAppearenceForDeselectedCell()
+		}
+	}
+	
+	func updateCenterX(itemWidth: CGFloat) {
+		NSLayoutConstraint.deactivate([self.label.centerXConstraint])
+		self.label.centerXConstraint = {
+			if self.label.attributedText?.string == "0" {
+				return self.label.centerXAnchor.constraint(equalTo: self.leadingAnchor, constant: itemWidth / 2)
+			}
+			return self.label.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+		}()
+		NSLayoutConstraint.activate([self.label.centerXConstraint])
+	}
+	
+	private func addDeselectedRadicalViewIfNeeded() {
+		switch self.viewModel.calculatorCell {
+		case .rootFunction:
+			self.backgroundView = RadicalViewDeselected(frame: self.frame)
+		default:
+			break
+		}
+	}
+	
+	private func addSelectedRadicalViewIfNeeded() {
+		switch self.viewModel.calculatorCell {
+		case .rootFunction:
+			self.backgroundView = RadicalViewSelected(frame: self.frame)
+		default:
+			break
+		}
+	}
 
-    private func updateProperties() {
-        self.backgroundColor = calculatorCell.backgroundColor
-        self.label.textColor = calculatorCell.textColor
-        self.label.attributedText = self.calculatorCell.attributedString
-        self.addRadicalViewIfNeeded()
-    }
-    
-    private func addRadicalViewIfNeeded() {
-        switch self.calculatorCell {
-        case .rootFunction:
-            self.backgroundView = RadicalViewDeselected(frame: self.frame)
-        default:
-            break
-        }
-    }
-
-    func toggleCalculatorCellValue() {
-        guard let calculatorCellToggledValue = self.calculatorCell.toggledValue else { return }
-        
-        self.calculatorCell = calculatorCellToggledValue
-    }
+	func toggleCalculatorCellValue() {
+		guard let calculatorCellToggledValue = self.viewModel.calculatorCell.toggledValue else { return }
+		
+		self.viewModel.calculatorCell = calculatorCellToggledValue
+	}
 }
