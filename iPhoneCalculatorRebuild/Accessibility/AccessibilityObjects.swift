@@ -9,28 +9,15 @@
 import UIKit
 
 class AccessibilityObjects {
-	enum Objects {
-		case collectionView
-		case labelView
-		case menuController
-		case outputLabel
-		case viewCells
-	}
-
 	
 	// MARK: - Singleton
 	
 	static let shared = AccessibilityObjects()
 	
-	// MARK: - Properties
-	
-	var labelView: LabelView!
-	var collectionView: CalculatorCollectionView!
-	
 	// MARK: - LabelView
 	
 	func update(labelView: LabelView) {
-		self.labelView.accessibilityLabel = "result" + labelView.outputLabel.attributedText!.string
+		labelView.accessibilityLabel = "result" + labelView.outputLabel.attributedText!.string
 	}
 	
 	func setup(labelView: LabelView) {
@@ -47,13 +34,8 @@ class AccessibilityObjects {
 	
 	// MARK: - Output Label
 	
-	func update(outputLabel: OutputLabel) {
-		outputLabel.accessibilityLabel = "result" + self.labelView.outputLabel.attributedText!.string
-	}
-	
 	func setup(outputLabel: OutputLabel) {
 		outputLabel.accessibilityIdentifier = "outputLabel"
-		
 	}
 	
 	// MARK: - View Cell
